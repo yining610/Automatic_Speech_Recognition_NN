@@ -5,6 +5,20 @@ import os
 import pandas as pd
 from torch.utils.data import Dataset
 
+def read_file_line_by_line(file_name, func=lambda x: x, skip_header=True):
+    print("reading file: %s" % file_name)
+    res = list()
+    with open(file_name, "r") as fin:
+        if skip_header:
+            fin.readline()  # skip the header
+        for line in fin:
+            if len(line.strip()) == 0:
+                continue
+            fields = func(line.strip())
+            res.append(fields)
+    print("%d lines, done" % len(res))
+    return res
+
 class AsrDataset(Dataset):
     def __init__(self, scr_file, feature_type='discrete', feature_file=None,
                  feature_label_file=None,
@@ -17,12 +31,39 @@ class AsrDataset(Dataset):
         :param wav_scp: clsp.trnwav or clsp.devwav
         :param wav_dir: wavforms/
         """
+        
+        self.feature_type = feature_type
         assert self.feature_type in ['discrete', 'mfcc']
 
         self.blank = "<blank>"
         self.silence = "<sil>"
 
         # === write your code here ===
+        self.lblnames = read_file_line_by_line(feature_label_file)
+
+        self.lbls = read_file_line_by_line(feature_file, func=lambda x: x.split())
+        self.script = read_file_line_by_line(scr_file)
+        assert len(self.lbls) == len(self.script)
+
+        if self.feature_type == "discrete":
+
+            # 23 letters + silence
+            self.letters = list(string.ascii_lowercase)
+            for c in ['k', 'q', 'z']:
+                self.letters.remove(c)
+            self.silence_id = len(self.letters)
+            self.letters.append(self.silence)
+            self.letter2id = dict({c: i for i, c in enumerate(self.letters)})
+            self.id2letter = dict({i: c for c, i in self.letter2id.items()})
+
+            # 256 quantized feature-vector labels
+            self.label2id = dict({lbl: i for i, lbl in enumerate(self.lblnames)})
+            self.id2label = dict({i: lbl for lbl, i in self.label2id.items()})
+
+            # convert feature labels to ids
+            self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
+            # convert word spelling to ids
+            self.script = [[self.letter2id[c] for c in word] for word in self.script]
 
 
     def __len__(self):
@@ -38,8 +79,13 @@ class AsrDataset(Dataset):
         :return: spelling_of_word, feature
         """
         # === write your code here ===
-        pass
+        feature = self.feature[idx]
+        spelling_of_word = self.script[idx]
+        # Pad the spelling on each side with a “silence” symbol
+        spelling_of_word.insert(0, self.silence_id)
+        spelling_of_word.append(self.silence_id)
 
+        return spelling_of_word, feature
 
     # This function is provided
     def compute_mfcc(self, wav_scp, wav_dir):
