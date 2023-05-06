@@ -20,7 +20,7 @@ def read_file_line_by_line(file_name, func=lambda x: x, skip_header=True):
     return res
 
 class AsrDataset(Dataset):
-    def __init__(self, scr_file, feature_type='discrete', feature_file=None,
+    def __init__(self, scr_file=None, feature_type='discrete', feature_file=None,
                  feature_label_file=None,
                  wav_scp=None, wav_dir=None):
         """
@@ -39,42 +39,51 @@ class AsrDataset(Dataset):
         self.silence = "<sil>"
 
         # === write your code here ===
+        self.scr_file = scr_file
         self.lblnames = read_file_line_by_line(feature_label_file)
 
         self.lbls = read_file_line_by_line(feature_file, func=lambda x: x.split())
-        self.script = read_file_line_by_line(scr_file)
-        assert len(self.lbls) == len(self.script)
 
-        if self.feature_type == "discrete":
+        # 23 letters + silence + blank
+        self.letters = list(string.ascii_lowercase)
+        for c in ['k', 'q', 'z']:
+            self.letters.remove(c)
+        self.silence_id = len(self.letters)
+        self.blank_id = len(self.letters) + 1
 
-            # 23 letters + silence
-            self.letters = list(string.ascii_lowercase)
-            for c in ['k', 'q', 'z']:
-                self.letters.remove(c)
-            self.silence_id = len(self.letters)
-            self.blank_id = len(self.letters) + 1
+        self.letters.append(self.silence)
+        self.letters.append(self.blank)
 
-            self.letters.append(self.silence)
-            self.letters.append(self.blank)
-
-            self.letter2id = dict({c: i for i, c in enumerate(self.letters)})
-            self.id2letter = dict({i: c for c, i in self.letter2id.items()})
-
-            # 256 quantized feature-vector labels
-            self.label2id = dict({lbl: i for i, lbl in enumerate(self.lblnames)})
-            self.id2label = dict({i: lbl for lbl, i in self.label2id.items()})
-
+        self.letter2id = dict({c: i for i, c in enumerate(self.letters)})
+        self.id2letter = dict({i: c for c, i in self.letter2id.items()})
+        
+        # 256 quantized feature-vector labels
+        self.label2id = dict({lbl: i for i, lbl in enumerate(self.lblnames)})
+        self.id2label = dict({i: lbl for lbl, i in self.label2id.items()})
+        
+        if (scr_file is not None) and (feature_type == "discrete"): # training dataset with discrete features
+            self.script = read_file_line_by_line(scr_file)
             # convert feature labels to ids
             self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
             # convert word spelling to ids
             self.script = [[self.letter2id[c] for c in word] for word in self.script]
+        elif (scr_file is None) and (feature_type == "discrete"):   # testing dataset with discrete features
+            self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
+        elif (scr_file is not None) and (feature_type == "mfcc"):   # training dataset with continuous features
+            self.script = [[self.letter2id[c] for c in word] for word in self.script]
+            self.feature = self.compute_mfcc(wav_scp, wav_dir)
+        else:                                                       # testing dataset with continuous features
+            self.feature = self.compute_mfcc(wav_scp, wav_dir)
 
 
     def __len__(self):
         """
         :return: num_of_samples
         """
-        return len(self.script)
+        if self.scr_file is None:
+            return len(self.lbls) # number of feature labels in test dataset
+        else:
+            return len(self.script) # number of word spellings in training dataset
 
     def __getitem__(self, idx):
         """
@@ -84,12 +93,17 @@ class AsrDataset(Dataset):
         """
         # === write your code here ===
         feature = self.feature[idx]
-        spelling_of_word = self.script[idx]
-        # Pad the spelling on each side with a “silence” symbol
-        spelling_of_word.insert(0, self.silence_id)
-        spelling_of_word.append(self.silence_id)
+        
+        # training dataset
+        if self.scr_file is not None:
+            spelling_of_word = self.script[idx]
+            # Pad the spelling on each side with a “silence” symbol
+            spelling_of_word.insert(0, self.silence_id)
+            spelling_of_word.append(self.silence_id)
 
-        return spelling_of_word, feature
+            return spelling_of_word, feature
+        else:
+            return feature
 
     # This function is provided
     def compute_mfcc(self, wav_scp, wav_dir):

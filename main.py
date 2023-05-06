@@ -28,11 +28,12 @@ def collate_fn(batch):
     """
     # === write your code here ===
     
-    # padded_word_spellings: (batch_size, max_word_spelling_length)
-    padded_word_spellings = pad_sequence([torch.tensor(sample[0]) for sample in batch], batch_first=True, padding_value=-1)
+    # silence-padded_word_spellings: (batch_size, max_word_spelling_length)
+    padded_word_spellings = pad_sequence([torch.tensor(sample[0]) for sample in batch], batch_first=True, padding_value=23)
 
     # padded_features: (batch_size, max_feature_length)
-    padded_features = pad_sequence([torch.tensor(sample[1]) for sample in batch], batch_first=True, padding_value=-1)
+    # 0-255 quantized 2-character labels, 256 padding token
+    padded_features = pad_sequence([torch.tensor(sample[1]) for sample in batch], batch_first=True, padding_value=256)
 
     # list_of_unpadded_word_spelling_length: (batch_size)
     list_of_unpadded_word_spelling_length = [len(sample[0]) for sample in batch]
@@ -44,21 +45,15 @@ def collate_fn(batch):
 
 def train(train_dataloader, model, ctc_loss, optimizer, device, epoch, NUM_EPOCHS):
     # === write your code here ===
-    loop = tqdm(train_dataloader)
+    loop = tqdm(train_dataloader, position=0, leave=True)
     for idx, data in enumerate(loop):
         padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length = data
         padded_word_spellings = padded_word_spellings.to(device)
         padded_features = padded_features.to(device)
-        print(f"Shape of padded_word_spellings: {padded_word_spellings.shape}")
 
         log_prob = model(padded_features)
-        print(f"Shape of log_prob: {log_prob.shape}")
 
         log_prob = log_prob.transpose(0, 1)
-        print(f"Shape of transposed log_prob: {log_prob.shape}")
-        
-        padded_word_spellings = padded_word_spellings.transpose(0, 1)
-        print(f"Shape of transposed padded_word_spellings: {padded_word_spellings.shape}")
         # loss: (batch_size)
         loss = ctc_loss(log_prob, padded_word_spellings, list_of_unpadded_feature_length, list_of_unpadded_word_spelling_length)
         optimizer.zero_grad()
@@ -71,9 +66,25 @@ def train(train_dataloader, model, ctc_loss, optimizer, device, epoch, NUM_EPOCH
     return loss
 
 
-def decode():
+def decode(dataloader, model, device):
     # === write your code here ===
-    pass
+    # pick the most likely letter for every frame
+    
+    for padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length in dataloader:
+        padded_features = padded_features.to(device)
+        log_prob = model(padded_features)
+        letter_id = torch.argmax(log_prob, dim=2, keepdim=False)
+
+        
+
+
+
+
+    
+
+
+    
+
 
 def compute_accuracy():
     # === write your code here ===
@@ -87,7 +98,8 @@ def main():
 
     train_dataloader = DataLoader(training_set, batch_size=32, shuffle=True, collate_fn=collate_fn)
     # test_dataloader = DataLoader(test_set, batch_size=32, shuffle=True, collate_fn=collate_fn)
-
+    
+    # exclude padding token in output_size
     model = LSTM_ASR(feature_type="discrete", input_size=64, hidden_size=256, num_layers=2, output_size=len(training_set.letter2id))
     model.to(device)
     
@@ -98,7 +110,7 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=5e-3)
 
     # Training
-    num_epochs = 5
+    num_epochs = 10
     for epoch in range(num_epochs):
         train(train_dataloader, model, loss_function, optimizer, device, epoch, num_epochs)
 
