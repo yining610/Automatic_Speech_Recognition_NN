@@ -27,15 +27,19 @@ class LSTM_ASR(torch.nn.Module):
         # === write your code here ===
 
         # embedded_batch_features: (batch_size, seq_len, input_size)
-        embedded_batch_features = self.word_embeddings(batch_features) 
+        embedded_batch_features = self.word_embeddings(batch_features)
+        print(f"Shape of embedded_batch_features: {embedded_batch_features.shape}")
 
         # lstm_out: (batch_size, seq_len, hidden_size)
         lstm_out, _ = self.lstm(embedded_batch_features) 
+        print(f"Shape of lstm_out: {lstm_out.shape}")
 
         # linear_out: (batch_size, seq_len, output_size)
         linear_out = self.linear(lstm_out)
+        print(f"Shape of linear_out: {linear_out.shape}")
         
         # log_prob: (batch_size, seq_len, output_size)
         log_prob = torch.nn.functional.log_softmax(linear_out, dim=2)
+        print(f"Shape of log_prob: {log_prob.shape}")
 
         return log_prob

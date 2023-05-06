@@ -31,7 +31,7 @@ class AsrDataset(Dataset):
         :param wav_scp: clsp.trnwav or clsp.devwav
         :param wav_dir: wavforms/
         """
-        
+
         self.feature_type = feature_type
         assert self.feature_type in ['discrete', 'mfcc']
 
@@ -52,7 +52,11 @@ class AsrDataset(Dataset):
             for c in ['k', 'q', 'z']:
                 self.letters.remove(c)
             self.silence_id = len(self.letters)
+            self.blank_id = len(self.letters) + 1
+
             self.letters.append(self.silence)
+            self.letters.append(self.blank)
+
             self.letter2id = dict({c: i for i, c in enumerate(self.letters)})
             self.id2letter = dict({i: c for c, i in self.letter2id.items()})
 
