@@ -102,7 +102,7 @@ class AsrDataset(Dataset):
             spelling_of_word.append(self.silence_id)
 
             return spelling_of_word, feature
-        else:
+        else: # testing dataset
             return feature
 
     # This function is provided
