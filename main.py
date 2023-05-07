@@ -14,7 +14,7 @@ from torch.nn.utils.rnn import pad_sequence
 from dataset import AsrDataset
 from model import LSTM_ASR
 from tqdm import tqdm
-
+import numpy as np
 
 def collate_fn(batch):
     """
@@ -31,27 +31,27 @@ def collate_fn(batch):
     # training datasest batch: list of tuples (word_spelling, features)
     if len(batch[0]) == 2:
         # silence-padded_word_spellings: (batch_size, max_word_spelling_length)
-        padded_word_spellings = pad_sequence([torch.tensor(sample[0]) for sample in batch], batch_first=True, padding_value=23)
-
+        # 0-22 letters, 23 silence, 24 blank, 25 padding token
+        padded_word_spellings = pad_sequence([torch.tensor(sample[0]) for sample in batch], batch_first=True, padding_value=25).long()
         # padded_features: (batch_size, max_feature_length)
         # 0-255 quantized 2-character labels, 256 padding token
-        padded_features = pad_sequence([torch.tensor(sample[1]) for sample in batch], batch_first=True, padding_value=256)
+        padded_features = pad_sequence([torch.tensor(sample[1]) for sample in batch], batch_first=True, padding_value=256).long()
 
         # list_of_unpadded_word_spelling_length: (batch_size)
-        list_of_unpadded_word_spelling_length = [len(sample[0]) for sample in batch]
+        list_of_unpadded_word_spelling_length = torch.tensor([len(sample[0]) for sample in batch], dtype=torch.long)
 
         # list_of_unpadded_feature_length: (batch_size)
-        list_of_unpadded_feature_length = [len(sample[1]) for sample in batch]
+        list_of_unpadded_feature_length = torch.tensor([len(sample[1]) for sample in batch], dtype=torch.long)
 
         return padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length
 
     else: # test dataset batch: list of features
         # padded_features: (batch_size, max_feature_length)
         # 0-255 quantized 2-character labels, 256 padding token
-        padded_features = pad_sequence([torch.tensor(sample) for sample in batch], batch_first=True, padding_value=256)
+        padded_features = pad_sequence([torch.tensor(sample) for sample in batch], batch_first=True, padding_value=256).long()
 
         # list_of_unpadded_feature_length: (batch_size)
-        list_of_unpadded_feature_length = [len(sample) for sample in batch]
+        list_of_unpadded_feature_length = torch.tensor([len(sample) for sample in batch], dtype=torch.long)
 
         return padded_features, list_of_unpadded_feature_length
 
@@ -60,10 +60,13 @@ def train(train_dataloader, model, ctc_loss, optimizer, device):
     # === write your code here ===
     for idx, data in enumerate(train_dataloader):
         padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length = data
-        padded_word_spellings = padded_word_spellings.to(device)
         padded_features = padded_features.to(device)
 
         log_prob = model(padded_features)
+
+        # # decode
+        # words,  words_log_prob= decode(log_prob, train_dataloader.dataset.dataset, k=3)
+        # compute_accuracy(words, padded_word_spellings, train_dataloader.dataset.dataset)
 
         log_prob = log_prob.transpose(0, 1)
         # loss: (batch_size)
@@ -76,36 +79,95 @@ def train(train_dataloader, model, ctc_loss, optimizer, device):
 
 def validate(validate_dataloader, model, CTC_loss, device):
     with torch.no_grad():
-        for i, (padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length) in enumerate(validate_dataloader):
-            padded_word_spellings = padded_word_spellings.to(device)
+        for idx, (padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length) in enumerate(validate_dataloader):
             padded_features = padded_features.to(device)
 
             log_prob = model(padded_features)
+            words,  words_log_prob= decode(log_prob, validate_dataloader.dataset.dataset, k=3)
+
+            compute_accuracy(words, padded_word_spellings, validate_dataloader.dataset.dataset)
 
             log_prob = log_prob.transpose(0, 1)
             # loss: (batch_size)
             loss = CTC_loss(log_prob, padded_word_spellings, list_of_unpadded_feature_length, list_of_unpadded_word_spelling_length)
 
-            decoded_letter = decode(log_prob, validate_dataloader.dataset.dataset)
-        
     return loss
 
 
-def decode(log_prob, dataset):
+def decode(log_post, dataset, k=3):
+    """Beam Search Decoder
+
+    Parameters:
+
+        log_post(Tensor) - the log posterior of network.
+        k(int) - beam size of decoder.
+
+    Outputs:
+
+        indices(Tensor) - a beam of index sequence.
+        log_prob(Tensor) - a beam of log likelihood of sequence.
+
+    Shape:
+
+        post: (batch_size, seq_length, vocab_size).
+        indices: (batch_size, beam_size, seq_length).
+        log_prob: (batch_size, beam_size).
+    """
+
+    batch_size, seq_length, _ = log_post.shape
+    log_prob, indices = log_post[:, 0, :].topk(k, sorted=True)
+    indices = indices.unsqueeze(-1)
+    for i in range(1, seq_length):
+        log_prob = log_prob.unsqueeze(-1) + log_post[:, i, :].unsqueeze(1).repeat(1, k, 1)
+        log_prob, index = log_prob.view(batch_size, -1).topk(k, sorted=True)
+        indices = torch.cat([indices, index.unsqueeze(-1)], dim=-1)
+
+    
+    best_indices = indices[:, 0, :]
+    best_log_prob = log_prob[:, 0]
+
+    # find the max value of best_indices
+    max_value = torch.max(best_indices)
+    print(max_value)
+
+    # compress the indices
+    compressed_indices = [None] * batch_size
+    for i in range(batch_size):
+        compressed_indices[i] = torch.unique_consecutive(best_indices[i]).cpu().numpy().tolist()
+
+    print(compressed_indices)
+    
+    # remove special tokens
+    for i, word in enumerate(compressed_indices):
+        compressed_indices[i] = [id for id in word if id not in [dataset.pad_id, dataset.blank_id, dataset.silence_id]]
+
+    # convert indices to word spelling
+    words_spelling = [[dataset.id2letter[id] for id in word] for word in compressed_indices]
+    words = [''.join(word) for word in words_spelling]
+
+    return words, best_log_prob
+
+
+
+def compute_accuracy(words, padded_word_spellings, dataset):
     # === write your code here ===
-    # pick the most likely letter for every frame
+    # recover the word spelling from padded_word_spellings
+    # remove special tokens
+    for i, word in enumerate(padded_word_spellings):
+        padded_word_spellings[i] = [id for id in word if id not in [dataset.pad_id, dataset.blank_id, dataset.silence_id]]
+    
+    # convert indices to word spelling
+    print(dataset.id2letter)
+    words_spelling = [[dataset.id2letter[id] for id in word] for word in padded_word_spellings]
+    origin_words = [''.join(word) for word in words_spelling]
 
-    picked_ids = torch.argmax(log_prob, dim=2)
-    picked_ids = picked_ids.cpu().numpy()
-    # convert ids to letters: (batch, seq_len)
-    picked_letters = [[dataset.id2letter[id] for id in ids] for ids in picked_ids]
-
-    return picked_letters
-
-
-def compute_accuracy():
-    # === write your code here ===
-    pass
+    for i, word in enumerate(origin_words):
+        if word == words[i]:
+            print("correct")
+        else:
+            print(words[i])
+            print(word)
+    
 
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -123,17 +185,16 @@ def main():
     test_dataloader = DataLoader(test_set, batch_size=32, shuffle=True, collate_fn=collate_fn)
     
     # output_size = 25 = 23 letters + silence + blank
-    model = LSTM_ASR(feature_type="discrete", input_size=64, hidden_size=256, num_layers=2, output_size=len(training_set.dataset.letter2id))
+    model = LSTM_ASR(feature_type="discrete", input_size=32, hidden_size=256, num_layers=2, output_size=len(training_set.dataset.letter2id))
     model.to(device)
     
     # training_set here is Subset object, so we need to access its dataset attribute
-    loss_function = torch.nn.CTCLoss(blank=training_set.dataset.blank_id, zero_infinity=True)
-
+    loss_function = torch.nn.CTCLoss(blank=training_set.dataset.blank_id, reduction='mean', zero_infinity=True)
     # optimizer is provided
     optimizer = torch.optim.Adam(model.parameters(), lr=5e-3)
 
     # Training
-    num_epochs = 10
+    num_epochs = 50
     for epoch in tqdm(range(num_epochs)):
         model.train()
         train_loss = train(train_dataloader, model, loss_function, optimizer, device)

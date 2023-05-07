@@ -44,15 +44,19 @@ class AsrDataset(Dataset):
 
         self.lbls = read_file_line_by_line(feature_file, func=lambda x: x.split())
 
-        # 23 letters + silence + blank
+        # 23 letters + silence + blank + pad
+        self.pad = "<pad>"
+
         self.letters = list(string.ascii_lowercase)
         for c in ['k', 'q', 'z']:
             self.letters.remove(c)
         self.silence_id = len(self.letters)
         self.blank_id = len(self.letters) + 1
+        self.pad_id = len(self.letters) + 2
 
         self.letters.append(self.silence)
         self.letters.append(self.blank)
+        self.letters.append(self.pad)
 
         self.letter2id = dict({c: i for i, c in enumerate(self.letters)})
         self.id2letter = dict({i: c for c, i in self.letter2id.items()})
@@ -98,8 +102,7 @@ class AsrDataset(Dataset):
         if self.scr_file is not None:
             spelling_of_word = self.script[idx]
             # Pad the spelling on each side with a “silence” symbol
-            spelling_of_word.insert(0, self.silence_id)
-            spelling_of_word.append(self.silence_id)
+            spelling_of_word = [self.silence_id] + spelling_of_word + [self.silence_id]
 
             return spelling_of_word, feature
         else: # testing dataset
