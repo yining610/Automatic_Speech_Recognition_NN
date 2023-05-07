@@ -83,9 +83,9 @@ def validate(validate_dataloader, model, CTC_loss, device):
             padded_features = padded_features.to(device)
 
             log_prob = model(padded_features)
-            words,  words_log_prob= decode(log_prob, validate_dataloader.dataset.dataset, k=3)
-
-            compute_accuracy(words, padded_word_spellings, validate_dataloader.dataset.dataset)
+            words,  words_log_prob= beam_search_decoder(log_prob, validate_dataloader.dataset.dataset, k=3)
+            print(words)
+            # compute_accuracy(words, padded_word_spellings, validate_dataloader.dataset.dataset)
 
             log_prob = log_prob.transpose(0, 1)
             # loss: (batch_size)
@@ -94,7 +94,7 @@ def validate(validate_dataloader, model, CTC_loss, device):
     return loss
 
 
-def decode(log_post, dataset, k=3):
+def beam_search_decoder(log_post, dataset, k=3):
     """Beam Search Decoder
 
     Parameters:
@@ -113,33 +113,40 @@ def decode(log_post, dataset, k=3):
         indices: (batch_size, beam_size, seq_length).
         log_prob: (batch_size, beam_size).
     """
-
+    log_post = log_post.cpu()
     batch_size, seq_length, _ = log_post.shape
     log_prob, indices = log_post[:, 0, :].topk(k, sorted=True)
     indices = indices.unsqueeze(-1)
     for i in range(1, seq_length):
+        # forward update log_prob
         log_prob = log_prob.unsqueeze(-1) + log_post[:, i, :].unsqueeze(1).repeat(1, k, 1)
-        log_prob, index = log_prob.view(batch_size, -1).topk(k, sorted=True)
-        indices = torch.cat([indices, index.unsqueeze(-1)], dim=-1)
+        new_log_prob = torch.zeros(batch_size, k)
+        new_indices = torch.zeros((batch_size, k, i+1))
 
-    
-    best_indices = indices[:, 0, :]
-    best_log_prob = log_prob[:, 0]
+        for idx in range(batch_size):
+            log_prob_idx, i = torch.topk(log_prob[idx].flatten(), k, sorted=True)
+            top_k_coordinate =  np.array(np.unravel_index(i.numpy(), log_prob[idx].shape)).T
+            new_log_prob[idx] = log_prob_idx
+            new_indices[idx] = torch.cat((indices[idx][top_k_coordinate[:,-2]], torch.tensor(top_k_coordinate[:,-1]).view(k,-1)), dim = 1)
 
-    # find the max value of best_indices
-    max_value = torch.max(best_indices)
-    print(max_value)
+        log_prob = new_log_prob
+        indices = new_indices
+
+    best_indices = indices[:, 0, :] # (batch_size, seq_length)
+    best_log_prob = log_prob[:, 0]  # (batch_size)
+
+    # sanity check: best log prob should be the sum of log prob of best indices
+    check_best_log_prob = torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.int64)).squeeze(-1), dim=1)
+    assert torch.sum(check_best_log_prob - best_log_prob) < 2e-4
 
     # compress the indices
     compressed_indices = [None] * batch_size
-    for i in range(batch_size):
-        compressed_indices[i] = torch.unique_consecutive(best_indices[i]).cpu().numpy().tolist()
-
-    print(compressed_indices)
+    for idx in range(batch_size):
+        compressed_indices[idx] = torch.unique_consecutive(best_indices[idx]).numpy().tolist()
     
     # remove special tokens
     for i, word in enumerate(compressed_indices):
-        compressed_indices[i] = [id for id in word if id not in [dataset.pad_id, dataset.blank_id, dataset.silence_id]]
+        compressed_indices[i] = [id for id in word if id not in [dataset.blank_id, dataset.silence_id, dataset.pad_id]]
 
     # convert indices to word spelling
     words_spelling = [[dataset.id2letter[id] for id in word] for word in compressed_indices]

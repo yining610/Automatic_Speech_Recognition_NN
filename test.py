@@ -12,6 +12,7 @@ print(training_set.dataset)
 
 import torch
 from torch import nn
+import numpy as np
 
 
 # Target are to be padded
@@ -20,16 +21,35 @@ C = 20      # Number of classes (including blank)
 N = 16      # Batch size
 S = 30      # Target sequence length of longest target in batch (padding length)
 S_min = 10  # Minimum target length, for demonstration purposes
+k = 3
 # Initialize random batch of input vectors, for *size = (T,N,C)
-input = torch.randn(T, N, C).log_softmax(2).detach().requires_grad_()
-print(input.shape)
-# Initialize random batch of targets (0 = blank, 1:C = classes)
-target = torch.randint(low=1, high=C, size=(N, S), dtype=torch.long)
-input_lengths = torch.full(size=(N,), fill_value=T, dtype=torch.long)
-target_lengths = torch.randint(low=S_min, high=S, size=(N,), dtype=torch.long)
-ctc_loss = nn.CTCLoss()
-print(target.shape)
-print(input_lengths.shape)
-print(target_lengths.shape)
-loss = ctc_loss(input, target, input_lengths, target_lengths)
-loss.backward()
+log_post = torch.randn(N, T, C).log_softmax(-1)
+
+batch_size, seq_length, _ = log_post.shape
+log_prob, indices = log_post[:, 0, :].topk(k, sorted=True)
+indices = indices.unsqueeze(-1)
+for i in range(1, seq_length):
+    # forward update log_prob
+    log_prob = log_prob.unsqueeze(-1) + log_post[:, i, :].unsqueeze(1).repeat(1, k, 1)
+    new_log_prob = torch.zeros(batch_size, k)
+    new_indices = torch.zeros((batch_size, k, i+1))
+
+    for idx in range(batch_size):
+        log_prob_idx, i = torch.topk(log_prob[idx].flatten(), k)
+        top_k_coordinate =  np.array(np.unravel_index(i.numpy(), log_prob[idx].shape)).T
+        new_log_prob[idx] = log_prob_idx
+        new_indices[idx] = torch.cat((indices[idx][top_k_coordinate[:,-2]], torch.tensor(top_k_coordinate[:,-1]).view(k,-1)), dim = 1)
+    
+    log_prob = new_log_prob
+    indices = new_indices
+
+# check the largest log_prob
+best_indices = indices[:, 0, :]
+best_log_prob = log_prob[:, 0]
+best_log_prob
+
+
+best_log_prob
+check_best_log_prob = torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.int64)).squeeze(-1), dim=1)
+
+assert torch.sum(check_best_log_prob - best_log_prob) < 1e-6
