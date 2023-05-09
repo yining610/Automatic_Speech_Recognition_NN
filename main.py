@@ -84,9 +84,8 @@ def validate(validate_dataloader, model, CTC_loss, device):
             padded_features = padded_features.to(device)
 
             log_prob = model(padded_features)
-            words,  words_log_prob= beam_search_decoder_use_library(log_prob, validate_dataloader.dataset.dataset, k=3)
+            words,  words_log_prob= beam_search_decoder(log_prob, validate_dataloader.dataset.dataset, k=3)
             print(words)
-            print(words_log_prob)
             # compute_accuracy(words, padded_word_spellings, validate_dataloader.dataset.dataset)
 
             log_prob = log_prob.transpose(0, 1)
@@ -155,18 +154,6 @@ def beam_search_decoder(log_post, dataset, k=3):
     words = [''.join(word) for word in words_spelling]
 
     return words, best_log_prob
-
-
-def beam_search_decoder_use_library(log_post, dataset, k=3):
-    decoder = CTCBeamDecoder(
-        dataset.letters,
-        beam_width=k,
-        blank_id=dataset.blank_id,
-        log_probs_input=True
-    )
-    beam_results, beam_scores, timesteps, out_lens = decoder.decode(log_post)
-
-    return beam_results, beam_scores
    
 def compute_accuracy(words, padded_word_spellings, dataset):
     # === write your code here ===
