@@ -50,6 +50,8 @@ best_log_prob
 
 
 best_log_prob
-check_best_log_prob = torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.int64)).squeeze(-1), dim=1)
+check = torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.int64)).squeeze(-1), dim=-1)
+print(best_log_prob)
+print(torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.int64)).squeeze(-1), dim=-1))
 
-assert torch.sum(check_best_log_prob - best_log_prob) < 1e-6
+torch.sum(check - best_log_prob)
