@@ -57,7 +57,24 @@ print(torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.
 torch.sum(check - best_log_prob)
 
 import torch
-T = 5
-C = 2
-torch.randint(low=1, high=20, size=(5,), dtype=torch.long)
-torch.randn(T, C).log_softmax(1).detach()
+B = 4
+T = 50      # Input sequence length
+C = 20      # Number of classes (including blank)
+
+# Initialize random batch of input vectors, for *size = (T,C)
+input = torch.randn(B, T, C)
+input = input.unsqueeze(1).expand(-1, 245, -1, -1)
+print(input.shape)
+print(input.shape)
+input_lengths = torch.tensor(T, dtype=torch.long)
+print(input_lengths)
+
+# Initialize random batch of targets (0 = blank, 1:C = classes)
+target_lengths = torch.randint(low=1, high=T, size=(), dtype=torch.long)
+print(target_lengths)
+target = torch.randint(low=1, high=C, size=(target_lengths,), dtype=torch.long)
+print(target)
+
+ctc_loss = torch.nn.CTCLoss()
+loss = ctc_loss(input, target, input_lengths, target_lengths)
+loss

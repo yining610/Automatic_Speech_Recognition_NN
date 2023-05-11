@@ -57,42 +57,53 @@ def collate_fn(batch):
         return padded_features, list_of_unpadded_feature_length
 
 
-def train(train_dataloader, model, ctc_loss, optimizer, device):
+def train(train_dataloader, model, CTC_loss, optimizer, device):
     # === write your code here ===
     count_beam = 0
     count_greedy = 0
     count_mrd = 0
+
+    dataset = train_dataloader.dataset.dataset
+
     for idx, data in enumerate(train_dataloader):
         padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length = data
         padded_features = padded_features.to(device)
 
         log_prob = model(padded_features)
-        words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, train_dataloader.dataset.dataset, k=3)
-        words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, train_dataloader.dataset.dataset)
-        words_mrd, words_ctcloss_mrd = minimum_risk_decoder(log_prob, list_of_unpadded_feature_length, train_dataloader.dataset.dataset, ctc_loss)
 
-        original_words, count_batch_beam =  compute_accuracy(words_beam, padded_word_spellings, train_dataloader.dataset.dataset)
-        original_words, count_batch_greedy = compute_accuracy(words_greedy, padded_word_spellings, train_dataloader.dataset.dataset)
+        words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, dataset, k=3)
+        words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, dataset)
+        words_mrd, words_ctcloss_mrd = minimum_risk_decoder(log_prob, dataset, CTC_loss)
         
+        origin_words = unpad(padded_word_spellings, dataset)
+
+        count_batch_beam =  compute_accuracy(words_beam, origin_words)
+        count_batch_greedy = compute_accuracy(words_greedy, origin_words)
+        count_batch_mrd = compute_accuracy(words_mrd, origin_words)
+
         count_beam += count_batch_beam
         count_greedy += count_batch_greedy
+        count_mrd += count_batch_mrd
 
         log_prob = log_prob.transpose(0, 1)
         # loss: (batch_size)
-        loss = ctc_loss(log_prob, padded_word_spellings, list_of_unpadded_feature_length, list_of_unpadded_word_spelling_length)
+        loss = CTC_loss(log_prob, padded_word_spellings, list_of_unpadded_feature_length, list_of_unpadded_word_spelling_length)
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
     
     accuracy_beam = count_beam / len(train_dataloader.dataset)
     accuracy_greedy = count_greedy / len(train_dataloader.dataset)
+    accuracy_mrd = count_mrd / len(train_dataloader.dataset)
 
-    return loss, accuracy_beam, accuracy_greedy
+    return loss, accuracy_beam, accuracy_greedy, accuracy_mrd
 
 def validate(validate_dataloader, model, CTC_loss, device):
     count_beam = 0
     count_greedy = 0
     count_mrd = 0
+
+    dataset = validate_dataloader.dataset.dataset
 
     with torch.no_grad():
         for idx, (padded_word_spellings, padded_features, list_of_unpadded_word_spelling_length, list_of_unpadded_feature_length) in enumerate(validate_dataloader):
@@ -100,15 +111,15 @@ def validate(validate_dataloader, model, CTC_loss, device):
 
             log_prob = model(padded_features)
 
-            words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, validate_dataloader.dataset.dataset, k=3)
+            words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, dataset, k=3)
+            words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, dataset)
+            words_mrd, words_ctcloss_mrd = minimum_risk_decoder(log_prob, dataset, CTC_loss)
+            
+            origin_words = unpad(padded_word_spellings, dataset)
 
-            words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, validate_dataloader.dataset.dataset)
-
-            words_mrd, words_ctcloss_mrd = minimum_risk_decoder(log_prob, list_of_unpadded_feature_length, validate_dataloader.dataset.dataset, CTC_loss)
-
-            origin_words, count_batch_beam =  compute_accuracy(words_beam, padded_word_spellings, validate_dataloader.dataset.dataset)
-            origin_words, count_batch_greedy = compute_accuracy(words_greedy, padded_word_spellings, validate_dataloader.dataset.dataset)
-            origin_words, count_batch_mrd = compute_accuracy(words_mrd, padded_word_spellings, validate_dataloader.dataset.dataset)
+            count_batch_beam =  compute_accuracy(words_beam, origin_words)
+            count_batch_greedy = compute_accuracy(words_greedy, origin_words)
+            count_batch_mrd = compute_accuracy(words_mrd, origin_words)
 
             print(words_mrd)
             print(origin_words)
@@ -218,57 +229,68 @@ def beam_search_decoder(log_post, dataset, k=3):
 
     return words, best_log_prob
 
-def minimum_risk_decoder(log_post, list_of_unpadded_feature_length, dataset, ctc_loss):
+def minimum_risk_decoder(log_post, dataset, ctc_loss):
 
-    # ctc_loss_list: (batch_size, vacab_size)
-    ctc_loss_list = torch.zeros(log_post.shape[0], len(dataset.script))
-    for i, (log_prob, unpadded_feature_length) in enumerate(zip(log_post, list_of_unpadded_feature_length)):
-        for j, word_spelling in enumerate(dataset.script):
-            padded_target = pad_sequence(torch.tensor(word_spelling), padding_value=dataset.pad_id).long()
-            unpadded_target_length = torch.tensor(len(word_spelling))
-            loss = ctc_loss(log_prob, padded_target, unpadded_feature_length, unpadded_target_length)
-            print(log_prob.shape)
-            print(padded_target.shape)
-            print(unpadded_feature_length.shape)
-            print(unpadded_target_length.shape)
+    # expand log_post to (batch_size, vocabular_size ,seq_length, output_size)
+    log_post = log_post.unsqueeze(1).repeat(1, len(dataset.script), 1, 1)
 
-            ctc_loss_list[i, j] = loss
+    words_list = []
+    min_ctcloss_list = []
+
+    for batched_log_prob in log_post:
+        target = dataset.script
+        padded_target = pad_sequence([torch.tensor(sample) for sample in target], batch_first=True, padding_value=dataset.pad_id).long()
+        
+        list_of_unpadded_feature_length = [len(feature) for feature in dataset.feature]
+        # ensure the length of unpadded feature of all words is not longer than the sequence length of batched log_post
+        list_of_unpadded_feature_length = [length if length <= batched_log_prob.shape[1] else batched_log_prob.shape[1] for length in list_of_unpadded_feature_length]
+        list_of_unpadded_feature_length = torch.tensor(list_of_unpadded_feature_length, dtype=torch.long)
+        list_of_unpadded_target_length = torch.tensor([len(word) for word in target], dtype=torch.long)
+
+        # repeated_log_prob: (vocabular_size, seq_length, output_size)
+        # padded_target: (vocabular_size, max_word_spelling_length)
+        # list_of_unpadded_target_length: (vocabular_size)
+        # list_of_unpadded_feature_length: (vocabular_size)
+        # loss: (batch_size)
+        batched_log_prob = batched_log_prob.transpose(0, 1)
+        loss = ctc_loss(batched_log_prob, padded_target, list_of_unpadded_feature_length, list_of_unpadded_target_length)
     
-    # find the index of the minimum ctc los
-    min_ctcloss, min_index = torch.min(ctc_loss_list, dim=1)
-    # gather the corresponding word from dataset.script
+        min_ctcloss, min_index = torch.min(loss, dim=0)
+        word_ids = dataset.script[min_index]
+        word = ''.join([dataset.id2letter[id] for id in word_ids])
+        words_list.append(word)
+        min_ctcloss_list.append(min_ctcloss)
+    
+    return words_list, min_ctcloss_list
 
-    words = [dataset.script[i] for i in min_index]     
 
-    return words, min_ctcloss
-
-   
-def compute_accuracy(words, padded_word_spellings, dataset):
-    # === write your code here ===
-    # recover the word spelling from padded_word_spellings
-    # remove special tokens
-
+def unpad(padded_word_spellings, dataset):
+    # convert padded word spelling to original word
     padded_word_spellings = padded_word_spellings.numpy().tolist()
     for i, word in enumerate(padded_word_spellings):
         padded_word_spellings[i] = [id for id in word if id not in [dataset.pad_id, dataset.blank_id, dataset.silence_id]]
-    
     # convert indices to word spelling
     words_spelling = [[dataset.id2letter[id] for id in word] for word in padded_word_spellings]
     origin_words = [''.join(word) for word in words_spelling]
 
+    return origin_words
+   
+def compute_accuracy(words, original_words):
+    # === write your code here ===
+
     count = 0
     for i in range(len(words)):
-        if words[i] == origin_words[i]:
+        if words[i] == original_words[i]:
             count += 1
     
-    return origin_words, count
+    return count
     
 
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    training_set = AsrDataset(scr_file='./data/clsp.trnscr', feature_type='discrete', feature_file="./data/clsp.trnlbls", feature_label_file="./data/clsp.lblnames")
-    test_set = AsrDataset(feature_type='discrete', feature_file="./data/clsp.devlbls", feature_label_file="./data/clsp.lblnames")
+    training_set = AsrDataset(scr_file='./data/clsp.trnscr', dataset_type="train", feature_type='discrete', feature_file="./data/clsp.trnlbls", feature_label_file="./data/clsp.lblnames")
+    test_set = AsrDataset(scr_file = "./data/clsp.trnscr", dataset_type="test", feature_type='discrete', feature_file="./data/clsp.devlbls", feature_label_file="./data/clsp.lblnames")
 
     # split training set into training and validation set
     train_size = int(0.8 * len(training_set))
@@ -292,10 +314,18 @@ def main():
     num_epochs = 50
     for epoch in tqdm(range(num_epochs)):
         model.train()
-        train_loss, accuracy_beam_train, accuracy_greedy_train = train(train_dataloader, model, loss_function, optimizer, device)
+        train_loss, accuracy_beam_train, accuracy_greedy_train, accuracy_mrd_train = train(train_dataloader, model, loss_function, optimizer, device)
         model.eval()
-        val_loss, accuracy_beam_val, accuracy_greedy_val = validate(validate_dataloader, model, loss_function, device)
-        tqdm.write(f"Epoch: {epoch}, Training Loss: {train_loss}, Training Beam Search Accuracy: {accuracy_beam_train}, Training Greedy Search Accuracy: {accuracy_greedy_train} Validation Loss: {val_loss} Validation Beam Search Accuracy: {accuracy_beam_val}, Validation Greedy Search Accuracy: {accuracy_greedy_val}")
+        val_loss, accuracy_beam_val, accuracy_greedy_val, accuracy_mrd_val = validate(validate_dataloader, model, loss_function, device)
+        tqdm.write(f"Epoch: {epoch}, \
+                   Training Loss: {train_loss}, \
+                   Training Beam Search Accuracy: {accuracy_beam_train}, \
+                   Training Greedy Search Accuracy: {accuracy_greedy_train}, \
+                   Training Minimum Risk Decode Accuracy: {accuracy_mrd_train}, \
+                   Validation Loss: {val_loss}, \
+                   Validation Beam Search Accuracy: {accuracy_beam_val}, \
+                   Validation Greedy Search Accuracy: {accuracy_greedy_val}, \
+                   Validation Minimum Risk Decode Accuracy: {accuracy_mrd_val}")
         
 
     # # Testing (totally by yourself)

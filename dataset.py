@@ -20,7 +20,7 @@ def read_file_line_by_line(file_name, func=lambda x: x, skip_header=True):
     return res
 
 class AsrDataset(Dataset):
-    def __init__(self, scr_file=None, feature_type='discrete', feature_file=None,
+    def __init__(self, scr_file, dataset_type =  "train", feature_type='discrete', feature_file=None,
                  feature_label_file=None,
                  wav_scp=None, wav_dir=None):
         """
@@ -33,7 +33,9 @@ class AsrDataset(Dataset):
         """
 
         self.feature_type = feature_type
+        self.dataset_type = dataset_type
         assert self.feature_type in ['discrete', 'mfcc']
+        assert self.dataset_type in ['train', 'test']
 
         self.blank = "<blank>"
         self.silence = "<sil>"
@@ -65,20 +67,16 @@ class AsrDataset(Dataset):
         self.label2id = dict({lbl: i for i, lbl in enumerate(self.lblnames)})
         self.id2label = dict({i: lbl for lbl, i in self.label2id.items()})
         
-        if (scr_file is not None) and (feature_type == "discrete"): # training dataset with discrete features
+        if  feature_type == "discrete":
             self.script = read_file_line_by_line(scr_file)
             # convert feature labels to ids
             self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
             # convert word spelling to ids
-            self.script = [[self.letter2id[c] for c in word] for word in self.script]
-        elif (scr_file is None) and (feature_type == "discrete"):   # testing dataset with discrete features
-            self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
-        elif (scr_file is not None) and (feature_type == "mfcc"):   # training dataset with continuous features
+            self.script = [[self.letter2id[c] for c in word] for word in self.script
+                           ]
+        else:
             self.script = [[self.letter2id[c] for c in word] for word in self.script]
             self.feature = self.compute_mfcc(wav_scp, wav_dir)
-        else:                                                       # testing dataset with continuous features
-            self.feature = self.compute_mfcc(wav_scp, wav_dir)
-
 
     def __len__(self):
         """
@@ -99,7 +97,7 @@ class AsrDataset(Dataset):
         feature = self.feature[idx]
         
         # training dataset
-        if self.scr_file is not None:
+        if self.dataset_type == "train":
             spelling_of_word = self.script[idx]
             # Pad the spelling on each side with a “silence” symbol
             spelling_of_word = [self.silence_id] + spelling_of_word + [self.silence_id]
