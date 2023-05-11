@@ -15,7 +15,6 @@ from dataset import AsrDataset
 from model import LSTM_ASR
 from tqdm import tqdm
 import numpy as np
-from ctcdecode import CTCBeamDecoder
 
 def collate_fn(batch):
     """
@@ -71,18 +70,18 @@ def train(train_dataloader, model, CTC_loss, optimizer, device):
 
         log_prob = model(padded_features)
 
-        words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, dataset, k=3)
-        words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, dataset)
+        # words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, dataset, k=3)
+        # words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, dataset)
         words_mrd, words_ctcloss_mrd = minimum_risk_decoder(log_prob, dataset, CTC_loss)
         
         origin_words = unpad(padded_word_spellings, dataset)
 
-        count_batch_beam =  compute_accuracy(words_beam, origin_words)
-        count_batch_greedy = compute_accuracy(words_greedy, origin_words)
+        # count_batch_beam =  compute_accuracy(words_beam, origin_words)
+        # count_batch_greedy = compute_accuracy(words_greedy, origin_words)
         count_batch_mrd = compute_accuracy(words_mrd, origin_words)
 
-        count_beam += count_batch_beam
-        count_greedy += count_batch_greedy
+        # count_beam += count_batch_beam
+        # count_greedy += count_batch_greedy
         count_mrd += count_batch_mrd
 
         log_prob = log_prob.transpose(0, 1)
@@ -111,21 +110,21 @@ def validate(validate_dataloader, model, CTC_loss, device):
 
             log_prob = model(padded_features)
 
-            words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, dataset, k=3)
-            words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, dataset)
+            # words_beam,  words_log_prob_beam = beam_search_decoder(log_prob, dataset, k=3)
+            # words_greedy, words_log_prob_greedy = greedy_search_decoder(log_prob, dataset)
             words_mrd, words_ctcloss_mrd = minimum_risk_decoder(log_prob, dataset, CTC_loss)
             
             origin_words = unpad(padded_word_spellings, dataset)
 
-            count_batch_beam =  compute_accuracy(words_beam, origin_words)
-            count_batch_greedy = compute_accuracy(words_greedy, origin_words)
+            # count_batch_beam =  compute_accuracy(words_beam, origin_words)
+            # count_batch_greedy = compute_accuracy(words_greedy, origin_words)
             count_batch_mrd = compute_accuracy(words_mrd, origin_words)
 
             print(words_mrd)
             print(origin_words)
             
-            count_beam += count_batch_beam
-            count_greedy += count_batch_greedy
+            # count_beam += count_batch_beam
+            # count_greedy += count_batch_greedy
             count_mrd += count_batch_mrd
 
             log_prob = log_prob.transpose(0, 1)
@@ -317,14 +316,11 @@ def main():
         train_loss, accuracy_beam_train, accuracy_greedy_train, accuracy_mrd_train = train(train_dataloader, model, loss_function, optimizer, device)
         model.eval()
         val_loss, accuracy_beam_val, accuracy_greedy_val, accuracy_mrd_val = validate(validate_dataloader, model, loss_function, device)
+        
         tqdm.write(f"Epoch: {epoch}, \
                    Training Loss: {train_loss}, \
-                   Training Beam Search Accuracy: {accuracy_beam_train}, \
-                   Training Greedy Search Accuracy: {accuracy_greedy_train}, \
                    Training Minimum Risk Decode Accuracy: {accuracy_mrd_train}, \
                    Validation Loss: {val_loss}, \
-                   Validation Beam Search Accuracy: {accuracy_beam_val}, \
-                   Validation Greedy Search Accuracy: {accuracy_greedy_val}, \
                    Validation Minimum Risk Decode Accuracy: {accuracy_mrd_val}")
         
 
