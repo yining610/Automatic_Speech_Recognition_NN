@@ -55,3 +55,6 @@ print(best_log_prob)
 print(torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.int64)).squeeze(-1), dim=-1))
 
 torch.sum(check - best_log_prob)
+
+import torch
+torch.randint(low=1, high=20, size=(5,), dtype=torch.long)
