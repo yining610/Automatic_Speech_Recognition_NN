@@ -57,4 +57,7 @@ print(torch.sum(torch.gather(log_post, 2, best_indices.unsqueeze(-1).type(torch.
 torch.sum(check - best_log_prob)
 
 import torch
+T = 5
+C = 2
 torch.randint(low=1, high=20, size=(5,), dtype=torch.long)
+torch.randn(T, C).log_softmax(1).detach()
