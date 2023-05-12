@@ -39,6 +39,8 @@ class AsrDataset(Dataset):
 
         self.blank = "<blank>"
         self.silence = "<sil>"
+        self.pad = "<pad>"
+        self.space = " "
 
         # === write your code here ===
         self.scr_file = scr_file
@@ -47,18 +49,21 @@ class AsrDataset(Dataset):
         self.lbls = read_file_line_by_line(feature_file, func=lambda x: x.split())
 
         # 23 letters + silence + blank + pad
-        self.pad = "<pad>"
-
+        
         self.letters = list(string.ascii_lowercase)
         for c in ['k', 'q', 'z']:
             self.letters.remove(c)
+
         self.silence_id = len(self.letters)
         self.blank_id = len(self.letters) + 1
         self.pad_id = len(self.letters) + 2
-
+        self.space_id = len(self.letters) + 3
+        
         self.letters.append(self.silence)
         self.letters.append(self.blank)
         self.letters.append(self.pad)
+        self.letters.append(self.space)
+        
 
         self.letter2id = dict({c: i for i, c in enumerate(self.letters)})
         self.id2letter = dict({i: c for c, i in self.letter2id.items()})
@@ -72,8 +77,7 @@ class AsrDataset(Dataset):
             # convert feature labels to ids
             self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
             # convert word spelling to ids
-            self.script = [[self.letter2id[c] for c in word] for word in self.script
-                           ]
+            self.script = [[self.letter2id[c] for c in word] for word in self.script]
         else:
             self.script = [[self.letter2id[c] for c in word] for word in self.script]
             self.feature = self.compute_mfcc(wav_scp, wav_dir)
@@ -82,7 +86,7 @@ class AsrDataset(Dataset):
         """
         :return: num_of_samples
         """
-        if self.scr_file is None:
+        if self.dataset_type == "test":
             return len(self.lbls) # number of feature labels in test dataset
         else:
             return len(self.script) # number of word spellings in training dataset
@@ -96,15 +100,13 @@ class AsrDataset(Dataset):
         # === write your code here ===
         feature = self.feature[idx]
         
-        # training dataset
-        if self.dataset_type == "train":
-            spelling_of_word = self.script[idx]
-            # Pad the spelling on each side with a “silence” symbol
-            spelling_of_word = [self.silence_id] + spelling_of_word + [self.silence_id]
+        spelling_of_word = self.script[idx]
+        # Pad the spelling on each side with a “silence” symbol
+        spelling_of_word = [self.silence_id] + spelling_of_word + [self.silence_id]
+        # add space between each letter
+        spelling_of_word = [item for sublist in [[i, self.space_id] for i in spelling_of_word] for item in sublist][:-1]
 
-            return spelling_of_word, feature
-        else: # testing dataset
-            return feature
+        return spelling_of_word, feature
 
     # This function is provided
     def compute_mfcc(self, wav_scp, wav_dir):
