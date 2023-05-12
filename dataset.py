@@ -20,7 +20,7 @@ def read_file_line_by_line(file_name, func=lambda x: x, skip_header=True):
     return res
 
 class AsrDataset(Dataset):
-    def __init__(self, scr_file, dataset_type =  "train", feature_type='discrete', feature_file=None,
+    def __init__(self, scr_file, feature_type='discrete', feature_file=None,
                  feature_label_file=None,
                  wav_scp=None, wav_dir=None):
         """
@@ -33,9 +33,7 @@ class AsrDataset(Dataset):
         """
 
         self.feature_type = feature_type
-        self.dataset_type = dataset_type
         assert self.feature_type in ['discrete', 'mfcc']
-        assert self.dataset_type in ['train', 'test']
 
         self.blank = "<blank>"
         self.silence = "<sil>"
@@ -48,8 +46,7 @@ class AsrDataset(Dataset):
 
         self.lbls = read_file_line_by_line(feature_file, func=lambda x: x.split())
 
-        # 23 letters + silence + blank + pad
-        
+        # 23 letters + silence + blank + pad + " "
         self.letters = list(string.ascii_lowercase)
         for c in ['k', 'q', 'z']:
             self.letters.remove(c)
@@ -72,24 +69,20 @@ class AsrDataset(Dataset):
         self.label2id = dict({lbl: i for i, lbl in enumerate(self.lblnames)})
         self.id2label = dict({i: lbl for lbl, i in self.label2id.items()})
         
+        self.script = read_file_line_by_line(scr_file)
+        self.script = [[self.letter2id[c] for c in word] for word in self.script]
+
         if  feature_type == "discrete":
-            self.script = read_file_line_by_line(scr_file)
             # convert feature labels to ids
             self.feature = [[self.label2id[lbl] for lbl in line] for line in self.lbls]
-            # convert word spelling to ids
-            self.script = [[self.letter2id[c] for c in word] for word in self.script]
         else:
-            self.script = [[self.letter2id[c] for c in word] for word in self.script]
             self.feature = self.compute_mfcc(wav_scp, wav_dir)
 
     def __len__(self):
         """
         :return: num_of_samples
         """
-        if self.dataset_type == "test":
-            return len(self.lbls) # number of feature labels in test dataset
-        else:
-            return len(self.script) # number of word spellings in training dataset
+        return len(self.lbls) # number of feature labels in test dataset
 
     def __getitem__(self, idx):
         """
