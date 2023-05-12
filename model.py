@@ -5,10 +5,11 @@ class LSTM_ASR(torch.nn.Module):
     def __init__(self, feature_type="discrete", input_size=64, hidden_size=256, num_layers=2,
                  output_size=28):
         super().__init__()
+       
         assert feature_type in ['discrete', 'mfcc']
         # Build your own neural network. Play with different hyper-parameters and architectures.
         # === write your code here ===
-
+        self.feature_type = feature_type
         if feature_type == "discrete":
             vocab_size = 257 # 256 quantized 2-character labels + 1 padding token
             self.word_embeddings = torch.nn.Embedding(vocab_size, input_size)
@@ -27,10 +28,11 @@ class LSTM_ASR(torch.nn.Module):
         # === write your code here ===
 
         # embedded_batch_features: (batch_size, seq_len, input_size)
-        embedded_batch_features = self.word_embeddings(batch_features)
+        if self.feature_type == "discrete":
+            batch_features = self.word_embeddings(batch_features)
 
         # lstm_out: (batch_size, seq_len, hidden_size)
-        lstm_out, _ = self.lstm(embedded_batch_features) 
+        lstm_out, _ = self.lstm(batch_features) 
 
         # linear_out: (batch_size, seq_len, output_size)
         linear_out = self.linear(lstm_out)
