@@ -4,11 +4,6 @@
 ```
 ├── IE_Project3_Report.pdf
 ├── README.md
-├── __pycache__
-│   ├── dataset.cpython-38.pyc
-│   ├── dataset.cpython-39.pyc
-│   ├── main.cpython-38.pyc
-│   └── model.cpython-38.pyc
 ├── checkpoints
 │   ├── discrete_model.pt
 │   └── mfcc_model.pt
