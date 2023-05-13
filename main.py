@@ -314,7 +314,7 @@ def main():
     train_size = int(0.95 * len(training_set))
     validation_size = len(training_set) - train_size
 
-    generator = torch.Generator().manual_seed(42)
+    generator = torch.Generator().manual_seed(0)
     training_set, validation_set = random_split(training_set, [train_size, validation_size], generator=generator)
 
     train_dataloader = DataLoader(training_set, batch_size=args.batch_size, shuffle=True, collate_fn=collate_fn)
