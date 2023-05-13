@@ -28,19 +28,19 @@ optional arguments:
 ```./checkpoints/mfcc_model.pt```: Model trained by mfcc feature
 
 
-**/figures**: Folder to store loss and accuracy plot
+**/figures**: Folder to store loss and accuracy plots
 
-```./figures/discrete_accuracy.png```: Training and validating accuracy using Greedy and Beam search for Discrete Model
+```./figures/discrete_accuracy.png```: Training and validating accuracy using Greedy and Beam search for Discrete model
 
-```./figures/mrd_accuracy.png```: Validating accuracy using Minimum CTCLoss Decoding strategy for Discrete Model
+```./figures/mrd_accuracy.png```: Validating accuracy using Minimum CTCLoss Decoding strategy for Discrete model
 
-```./figures/discrete_loss.png```: Training and validating CTC loss for Discrete Model
+```./figures/discrete_loss.png```: Training and validating CTC loss for Discrete model
 
 ```./figures/mfcc_accuracy.png```: Training and validating accuracy using Greedy and Beam search for MFCC model
 
-```./figures/mfcc_accuracy.png```: Validating accuracy using Minimum CTCLoss Decoding strategy for MFCC Model
+```./figures/mfcc_accuracy.png```: Validating accuracy using Minimum CTCLoss Decoding strategy for MFCC model
 
-```./figures/mfcc_loss.png```: Training and validating CTC loss for MFCC Model
+```./figures/mfcc_loss.png```: Training and validating CTC loss for MFCC model
 
 # Evaluate the Trained Discrete and MFCC models
 
@@ -53,11 +53,40 @@ Output:
 
 Train the model: ```python main.py -v -b 16 -f discrete -e 50```
 
+Dataset setting:
+1. Training size: 758
+2. Validating size: 40
+3. Testing size: 393
+
 Hyperparameter Settings: 
+1. seed for ```random_split```: 0
+2. model: LSTM
+3. Embedding size: 40
+4. hidden state size: 256
+5. number layers: 2
+6. learning rate: 5e-3
+7. silence token id: 23
+8. blank token id: 24
+9. pad token id: 25
+
+
+# Contrastive System
+
+Train the model: ```python main.py -v -b 16 -f mfcc -e 50```
+
+Dataset setting:
+1. Training size: 758
+2. Validating size: 40
+3. Testing size: 393
+
+Hyperparameter Settings:
 1. seed for ```random_split```: 0
 2. model: LSTM
 3. input size: 40
 4. hidden state size: 256
 5. number layers: 2
 6. learning rate: 5e-3
+7. silence token id: 23
+8. blank token id: 24
+9. pad token id: 25
 
