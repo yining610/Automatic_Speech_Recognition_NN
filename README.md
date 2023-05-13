@@ -1,6 +1,45 @@
 # Automatic_Speech_Recognition_NN
 
+# Directory Structure (Exclude ./data/waveforms)
+├── IE_Project3_Report.pdf
+├── README.md
+├── __pycache__
+│   ├── dataset.cpython-38.pyc
+│   ├── dataset.cpython-39.pyc
+│   ├── main.cpython-38.pyc
+│   └── model.cpython-38.pyc
+├── checkpoints
+│   ├── discrete_model.pt
+│   └── mfcc_model.pt
+├── data
+│   ├── clsp.devlbls
+│   ├── clsp.devwav
+│   ├── clsp.endpts
+│   ├── clsp.lblnames
+│   ├── clsp.trnlbls
+│   ├── clsp.trnscr
+│   └── clsp.trnwav
+├── dataset.py
+├── discrete_test_result.json
+├── evaluate.py
+├── figures
+│   ├── discrete_accuracy.png
+│   ├── discrete_loss.png
+│   ├── discrete_mrd_accuracy.png
+│   ├── mfcc_accuracy.png
+│   ├── mfcc_loss.png
+│   └── mfcc_mrd_accuracy.png
+├── main.py
+├── mfcc_test_result.json
+├── model.py
+├── requirements.txt
+└── snapshots
+    ├── discrete.png
+    └── mfcc.png
+
 # Files and Folders:
+
+**IE_Project3_Report.pdf**: Project report
 
 **main.py**: Training and evaluating
 
@@ -77,7 +116,7 @@ Train the model: ```python main.py -v -b 16 -f discrete -e 50```
 
 Outputs:  ```./figuress/discrete_accuracy.png ./figures/discrete_loss.png ./figures/discrete_mrd_accuracy.png```, ```discrete_test_result.json```, ```./checkpoints/discrete_model.pt```
 
-Snapshot:
+Training Snapshot:
 ![Last Epoch](/snapshots/discrete.png)
 
 Dataset setting:
@@ -85,35 +124,44 @@ Dataset setting:
 2. Validating size: 40
 3. Testing size: 393
 
+Model Structure:
+Embedding -> LSTM -> linear -> LogSoftmax
+
 Hyperparameter Settings: 
 1. seed for ```random_split```: 0
-2. model: LSTM
-3. Embedding size: 40
-4. hidden state size: 256
-5. number layers: 2
-6. learning rate: 5e-3
-7. silence token id: 23
-8. blank token id: 24
-9. pad token id: 25
+2. Embedding size: 40
+3. hidden state size: 256
+4. number layers: 2
+5. learning rate: 5e-3
+6. silence token id: 23
+7. blank token id: 24
+8. pad token id: 25
 
 
 # Contrastive System
 
 Train the model: ```python main.py -v -b 16 -f mfcc -e 50```
 
+Outputs:  ```./figuress/mfcc_accuracy.png ./figures/mfcc_loss.png ./figures/mfcc_mrd_accuracy.png```, ```mfcc_test_result.json```, ```./checkpoints/mfcc_model.pt```
+
+Training Snapshot:
+![Last Epoch](/snapshots/mfcc.png)
+
 Dataset setting:
 1. Training size: 758
 2. Validating size: 40
 3. Testing size: 393
 
+Model Structure:
+LSTM -> linear -> LogSoftmax
+
 Hyperparameter Settings:
 1. seed for ```random_split```: 0
-2. model: LSTM
-3. input size: 40
-4. hidden state size: 256
-5. number layers: 2
-6. learning rate: 5e-3
-7. silence token id: 23
-8. blank token id: 24
-9. pad token id: 25
+2. input size: 40
+3. hidden state size: 256
+4. number layers: 2
+5. learning rate: 5e-3
+6. silence token id: 23
+7. blank token id: 24
+8. pad token id: 25
 
