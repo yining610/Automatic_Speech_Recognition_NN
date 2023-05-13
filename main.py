@@ -109,11 +109,10 @@ def validate(validate_dataloader, model, CTC_loss):
             loss = CTC_loss(log_prob, padded_word_spellings, list_of_unpadded_feature_length, list_of_unpadded_word_spelling_length)
         
         # print the last batch
-        if args.verbose:
-            print(f"Validation Greedy Search Decoded Words: {words_greedy}")
-            print(f"Validationo Beam Search Decoded Words: {words_beam}")
-            print(f"Validation CTC Decoded Words: {words_mrd}")
-            print(f"original words: {origin_words}")
+        print(f"Validation Greedy Search Decoded Words: {words_greedy}")
+        print(f"Validationo Beam Search Decoded Words: {words_beam}")
+        print(f"Validation CTC Decoded Words: {words_mrd}")
+        print(f"original words: {origin_words}")
 
         accuracy_beam = count_beam / len(validate_dataloader.dataset)
         accuracy_greedy = count_greedy / len(validate_dataloader.dataset)
@@ -308,19 +307,22 @@ def compute_accuracy(words, original_words):
 
 def main():
 
-    training_set = AsrDataset(scr_file='./data/clsp.trnscr', feature_type=args.feature_type, feature_file="./data/clsp.trnlbls", feature_label_file="./data/clsp.lblnames",  wav_scp='./dataa/clsp.trnwav', wav_dir='./data/waveforms/')
+    training_set = AsrDataset(scr_file='./data/clsp.trnscr', feature_type=args.feature_type, feature_file="./data/clsp.trnlbls", feature_label_file="./data/clsp.lblnames",  wav_scp='./data/clsp.trnwav', wav_dir='./data/waveforms/')
     test_set = AsrDataset(scr_file = "./data/clsp.trnscr", feature_type=args.feature_type, feature_file="./data/clsp.devlbls", feature_label_file="./data/clsp.lblnames",  wav_scp='./data/clsp.devwav', wav_dir='./data/waveforms/')
     
     # split training set into training and validation set
-    train_size = int(0.9 * len(training_set))
+    train_size = int(0.95 * len(training_set))
     validation_size = len(training_set) - train_size
-    training_set, validation_set = random_split(training_set, [train_size, validation_size])
 
-    train_dataloader = DataLoader(training_set, batch_size=32, shuffle=True, collate_fn=collate_fn)
-    validate_dataloader = DataLoader(validation_set, batch_size=32, shuffle=False, collate_fn=collate_fn)
-    test_dataloader = DataLoader(test_set, batch_size=32, shuffle=False, collate_fn=collate_fn)
+    generator = torch.Generator().manual_seed(42)
+    training_set, validation_set = random_split(training_set, [train_size, validation_size], generator=generator)
+
+    train_dataloader = DataLoader(training_set, batch_size=args.batch_size, shuffle=True, collate_fn=collate_fn)
+    validate_dataloader = DataLoader(validation_set, batch_size=args.batch_size, shuffle=False, collate_fn=collate_fn)
+    test_dataloader = DataLoader(test_set, batch_size=args.batch_size, shuffle=False, collate_fn=collate_fn)
 
     if args.verbose:
+        print(f"Batch Size: {args.batch_size}")
         print(f"Training set size: {len(train_dataloader.dataset)}")
         print(f"Validation set size: {len(validate_dataloader.dataset)}")
         print(f"Test set size: {len(test_dataloader.dataset)}")
@@ -370,7 +372,7 @@ def main():
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.legend()
-    plt.savefig(f"{args.feature_type}_loss.png")
+    plt.savefig(f"./figures/{args.feature_type}_loss.png", dpi=300)
 
     # plot training and validation accuracy
     plt.clf()
@@ -381,14 +383,14 @@ def main():
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
     plt.legend()
-    plt.savefig(f"{args.feature_type}_accuracy.png")
+    plt.savefig(f"./figures/{args.feature_type}_accuracy.png", dpi=300)
 
     plt.clf()
     plt.plot(val_mrd_acc_list, label="Validation Minimum Risk Decode Accuracy")
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
     plt.legend()
-    plt.savefig(f"{args.feature_type}_mrd_accuracy.png")
+    plt.savefig(f"./figures/{args.feature_type}_mrd_accuracy.png", dpi=300)
 
     # testing
     model.eval()
@@ -399,7 +401,8 @@ def main():
     words_ctcloss_mrd = [i.item() for i in words_ctcloss_mrd]
 
     # save testing result to json file
-    with open('test_result.json', 'w') as f:
+    store_files_path = f"./{args.feature_type}_test_result.json"
+    with open(store_files_path, 'w') as f:
         data = [None] * len(words_beam)
         for i in range(len(words_beam)):
             data[i] = {"Test Id": i,
@@ -412,7 +415,7 @@ def main():
         json.dump(data, f, indent=4)
 
     # Save the model 
-    torch.save(model.state_dict(), "model.pt")
+    torch.save(model.state_dict(), f"./checkpoints/{args.feature_type}_model.pt")
 
 
 if __name__ == "__main__":
@@ -420,6 +423,7 @@ if __name__ == "__main__":
     argparser.add_argument("-v", "--verbose", action="store_true", help="increase output verbosity")
     argparser.add_argument("-e", "--epoch", type=int, default=10, help="number of epochs")
     argparser.add_argument("-f", "--feature_type", type=str, default="discrete", help="feature type: discrete or mfcc")
+    argparser.add_argument("-b", "--batch_size", type=int, default=32, help="batch size")
 
     args = argparser.parse_args()
 

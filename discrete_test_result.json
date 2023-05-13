@@ -1,0 +1,3539 @@
+[
+    {
+        "Test Id": 0,
+        "Beam Search Decode": "e",
+        "Beam Search Forward Log Prob": -1.7158405780792236,
+        "Greedy Search Decode": "e",
+        "Greedy Search Forward Log Prob": -1.7158405780792236,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.831808865070343
+    },
+    {
+        "Test Id": 1,
+        "Beam Search Decode": "eue",
+        "Beam Search Forward Log Prob": -5.498331546783447,
+        "Greedy Search Decode": "eue",
+        "Greedy Search Forward Log Prob": -5.498331069946289,
+        "Minimum Risk Decode": "become",
+        "Minimum Risk CTC Loss": 0.7294682264328003
+    },
+    {
+        "Test Id": 2,
+        "Beam Search Decode": "lso",
+        "Beam Search Forward Log Prob": -2.582045078277588,
+        "Greedy Search Decode": "lso",
+        "Greedy Search Forward Log Prob": -2.5820467472076416,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.33738723397254944
+    },
+    {
+        "Test Id": 3,
+        "Beam Search Decode": "roun",
+        "Beam Search Forward Log Prob": -3.786147117614746,
+        "Greedy Search Decode": "roun",
+        "Greedy Search Forward Log Prob": -3.7861480712890625,
+        "Minimum Risk Decode": "around",
+        "Minimum Risk CTC Loss": 0.6679683327674866
+    },
+    {
+        "Test Id": 4,
+        "Beam Search Decode": "brobl",
+        "Beam Search Forward Log Prob": -6.184957981109619,
+        "Greedy Search Decode": "brobl",
+        "Greedy Search Forward Log Prob": -6.1849589347839355,
+        "Minimum Risk Decode": "problem",
+        "Minimum Risk CTC Loss": 0.6174747943878174
+    },
+    {
+        "Test Id": 5,
+        "Beam Search Decode": "nu",
+        "Beam Search Forward Log Prob": -6.0434346199035645,
+        "Greedy Search Decode": "nu",
+        "Greedy Search Forward Log Prob": -6.043435096740723,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 0.6560552716255188
+    },
+    {
+        "Test Id": 6,
+        "Beam Search Decode": "oe",
+        "Beam Search Forward Log Prob": -2.4764082431793213,
+        "Greedy Search Decode": "oe",
+        "Greedy Search Forward Log Prob": -2.4764115810394287,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 2.1203863620758057
+    },
+    {
+        "Test Id": 7,
+        "Beam Search Decode": "vr",
+        "Beam Search Forward Log Prob": -3.4565374851226807,
+        "Greedy Search Decode": "vr",
+        "Greedy Search Forward Log Prob": -3.4565393924713135,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.3332650065422058
+    },
+    {
+        "Test Id": 8,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -3.2419111728668213,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -3.241912364959717,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.5620424747467041
+    },
+    {
+        "Test Id": 9,
+        "Beam Search Decode": "",
+        "Beam Search Forward Log Prob": -1.3052306175231934,
+        "Greedy Search Decode": "",
+        "Greedy Search Forward Log Prob": -1.3052306175231934,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.9421696066856384
+    },
+    {
+        "Test Id": 10,
+        "Beam Search Decode": "rloo",
+        "Beam Search Forward Log Prob": -1.997593879699707,
+        "Greedy Search Decode": "rloo",
+        "Greedy Search Forward Log Prob": -1.9975934028625488,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 1.7566596269607544
+    },
+    {
+        "Test Id": 11,
+        "Beam Search Decode": "an",
+        "Beam Search Forward Log Prob": -4.904062747955322,
+        "Greedy Search Decode": "an",
+        "Greedy Search Forward Log Prob": -4.9040632247924805,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 1.159956693649292
+    },
+    {
+        "Test Id": 12,
+        "Beam Search Decode": "olwa",
+        "Beam Search Forward Log Prob": -3.9079198837280273,
+        "Greedy Search Decode": "olwa",
+        "Greedy Search Forward Log Prob": -3.9079203605651855,
+        "Minimum Risk Decode": "always",
+        "Minimum Risk CTC Loss": 0.9554001688957214
+    },
+    {
+        "Test Id": 13,
+        "Beam Search Decode": "moe",
+        "Beam Search Forward Log Prob": -4.799258708953857,
+        "Greedy Search Decode": "moe",
+        "Greedy Search Forward Log Prob": -4.799260139465332,
+        "Minimum Risk Decode": "money",
+        "Minimum Risk CTC Loss": 0.1538870483636856
+    },
+    {
+        "Test Id": 14,
+        "Beam Search Decode": "lwa",
+        "Beam Search Forward Log Prob": -2.9263460636138916,
+        "Greedy Search Decode": "lwa",
+        "Greedy Search Forward Log Prob": -2.9263453483581543,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.32926222681999207
+    },
+    {
+        "Test Id": 15,
+        "Beam Search Decode": "on",
+        "Beam Search Forward Log Prob": -2.9299581050872803,
+        "Greedy Search Decode": "on",
+        "Greedy Search Forward Log Prob": -2.9299585819244385,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.537550151348114
+    },
+    {
+        "Test Id": 16,
+        "Beam Search Decode": "nte",
+        "Beam Search Forward Log Prob": -2.78256893157959,
+        "Greedy Search Decode": "nte",
+        "Greedy Search Forward Log Prob": -2.7825682163238525,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.7628431916236877
+    },
+    {
+        "Test Id": 17,
+        "Beam Search Decode": "nothiin",
+        "Beam Search Forward Log Prob": -5.898362636566162,
+        "Greedy Search Decode": "nothiin",
+        "Greedy Search Forward Log Prob": -5.898365020751953,
+        "Minimum Risk Decode": "nothing",
+        "Minimum Risk CTC Loss": 0.1972956359386444
+    },
+    {
+        "Test Id": 18,
+        "Beam Search Decode": "l",
+        "Beam Search Forward Log Prob": -2.382690668106079,
+        "Greedy Search Decode": "l",
+        "Greedy Search Forward Log Prob": -2.3826894760131836,
+        "Minimum Risk Decode": "always",
+        "Minimum Risk CTC Loss": 2.2127761840820312
+    },
+    {
+        "Test Id": 19,
+        "Beam Search Decode": "ater",
+        "Beam Search Forward Log Prob": -4.6998209953308105,
+        "Greedy Search Decode": "ater",
+        "Greedy Search Forward Log Prob": -4.6998209953308105,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.7435435056686401
+    },
+    {
+        "Test Id": 20,
+        "Beam Search Decode": "prbouee",
+        "Beam Search Forward Log Prob": -7.494077205657959,
+        "Greedy Search Decode": "prbouee",
+        "Greedy Search Forward Log Prob": -7.494076251983643,
+        "Minimum Risk Decode": "problem",
+        "Minimum Risk CTC Loss": 0.8296756744384766
+    },
+    {
+        "Test Id": 21,
+        "Beam Search Decode": "othr",
+        "Beam Search Forward Log Prob": -4.323688983917236,
+        "Greedy Search Decode": "othr",
+        "Greedy Search Forward Log Prob": -4.323691368103027,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.5437086820602417
+    },
+    {
+        "Test Id": 22,
+        "Beam Search Decode": "pol",
+        "Beam Search Forward Log Prob": -7.173028469085693,
+        "Greedy Search Decode": "pol",
+        "Greedy Search Forward Log Prob": -7.173030376434326,
+        "Minimum Risk Decode": "problem",
+        "Minimum Risk CTC Loss": 1.8983111381530762
+    },
+    {
+        "Test Id": 23,
+        "Beam Search Decode": "ovrer",
+        "Beam Search Forward Log Prob": -2.2792985439300537,
+        "Greedy Search Decode": "ovrer",
+        "Greedy Search Forward Log Prob": -2.279298782348633,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.3285423517227173
+    },
+    {
+        "Test Id": 24,
+        "Beam Search Decode": "oornin",
+        "Beam Search Forward Log Prob": -6.4321608543396,
+        "Greedy Search Decode": "oornin",
+        "Greedy Search Forward Log Prob": -6.432163715362549,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 0.6670010685920715
+    },
+    {
+        "Test Id": 25,
+        "Beam Search Decode": "",
+        "Beam Search Forward Log Prob": -1.1996394395828247,
+        "Greedy Search Decode": "",
+        "Greedy Search Forward Log Prob": -1.1996393203735352,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 1.957293152809143
+    },
+    {
+        "Test Id": 26,
+        "Beam Search Decode": "aou",
+        "Beam Search Forward Log Prob": -2.171382427215576,
+        "Greedy Search Decode": "aou",
+        "Greedy Search Forward Log Prob": -2.171384811401367,
+        "Minimum Risk Decode": "around",
+        "Minimum Risk CTC Loss": 0.6964752674102783
+    },
+    {
+        "Test Id": 27,
+        "Beam Search Decode": "eaten",
+        "Beam Search Forward Log Prob": -4.348050594329834,
+        "Greedy Search Decode": "eaten",
+        "Greedy Search Forward Log Prob": -4.348050117492676,
+        "Minimum Risk Decode": "eating",
+        "Minimum Risk CTC Loss": 0.6742814183235168
+    },
+    {
+        "Test Id": 28,
+        "Beam Search Decode": "rother",
+        "Beam Search Forward Log Prob": -2.938838005065918,
+        "Greedy Search Decode": "rother",
+        "Greedy Search Forward Log Prob": -2.9388396739959717,
+        "Minimum Risk Decode": "brother",
+        "Minimum Risk CTC Loss": 0.20070341229438782
+    },
+    {
+        "Test Id": 29,
+        "Beam Search Decode": "inoth",
+        "Beam Search Forward Log Prob": -5.407472610473633,
+        "Greedy Search Decode": "inoth",
+        "Greedy Search Forward Log Prob": -5.407475471496582,
+        "Minimum Risk Decode": "another",
+        "Minimum Risk CTC Loss": 1.0672941207885742
+    },
+    {
+        "Test Id": 30,
+        "Beam Search Decode": "bo",
+        "Beam Search Forward Log Prob": -1.794034481048584,
+        "Greedy Search Decode": "bo",
+        "Greedy Search Forward Log Prob": -1.7940342426300049,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.49385547637939453
+    },
+    {
+        "Test Id": 31,
+        "Beam Search Decode": "ter",
+        "Beam Search Forward Log Prob": -3.45263409614563,
+        "Greedy Search Decode": "ter",
+        "Greedy Search Forward Log Prob": -3.4526357650756836,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.38921040296554565
+    },
+    {
+        "Test Id": 32,
+        "Beam Search Decode": "otin",
+        "Beam Search Forward Log Prob": -6.861217498779297,
+        "Greedy Search Decode": "otin",
+        "Greedy Search Forward Log Prob": -6.861217975616455,
+        "Minimum Risk Decode": "nothing",
+        "Minimum Risk CTC Loss": 0.938249409198761
+    },
+    {
+        "Test Id": 33,
+        "Beam Search Decode": "nothin",
+        "Beam Search Forward Log Prob": -8.357748031616211,
+        "Greedy Search Decode": "nothin",
+        "Greedy Search Forward Log Prob": -8.357748985290527,
+        "Minimum Risk Decode": "nothing",
+        "Minimum Risk CTC Loss": 0.20722514390945435
+    },
+    {
+        "Test Id": 34,
+        "Beam Search Decode": "noou",
+        "Beam Search Forward Log Prob": -3.988753080368042,
+        "Greedy Search Decode": "noou",
+        "Greedy Search Forward Log Prob": -3.988753318786621,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 0.7899819612503052
+    },
+    {
+        "Test Id": 35,
+        "Beam Search Decode": "mnd",
+        "Beam Search Forward Log Prob": -4.73364782333374,
+        "Greedy Search Decode": "mnd",
+        "Greedy Search Forward Log Prob": -4.733650207519531,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 1.6371153593063354
+    },
+    {
+        "Test Id": 36,
+        "Beam Search Decode": "stue",
+        "Beam Search Forward Log Prob": -6.532289981842041,
+        "Greedy Search Decode": "stue",
+        "Greedy Search Forward Log Prob": -6.53228759765625,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 0.915599524974823
+    },
+    {
+        "Test Id": 37,
+        "Beam Search Decode": "at",
+        "Beam Search Forward Log Prob": -3.2568345069885254,
+        "Greedy Search Decode": "at",
+        "Greedy Search Forward Log Prob": -3.2568347454071045,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 1.3540269136428833
+    },
+    {
+        "Test Id": 38,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -4.587331295013428,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -4.5873308181762695,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.3358014225959778
+    },
+    {
+        "Test Id": 39,
+        "Beam Search Decode": "svra",
+        "Beam Search Forward Log Prob": -3.335301399230957,
+        "Greedy Search Decode": "svra",
+        "Greedy Search Forward Log Prob": -3.335301637649536,
+        "Minimum Risk Decode": "several",
+        "Minimum Risk CTC Loss": 0.8696609735488892
+    },
+    {
+        "Test Id": 40,
+        "Beam Search Decode": "orin",
+        "Beam Search Forward Log Prob": -5.35212516784668,
+        "Greedy Search Decode": "orin",
+        "Greedy Search Forward Log Prob": -5.352126121520996,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 0.36505967378616333
+    },
+    {
+        "Test Id": 41,
+        "Beam Search Decode": "aril",
+        "Beam Search Forward Log Prob": -6.728455543518066,
+        "Greedy Search Decode": "aril",
+        "Greedy Search Forward Log Prob": -6.728456497192383,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 1.0216940641403198
+    },
+    {
+        "Test Id": 42,
+        "Beam Search Decode": "tn",
+        "Beam Search Forward Log Prob": -3.878592014312744,
+        "Greedy Search Decode": "tn",
+        "Greedy Search Forward Log Prob": -3.8785934448242188,
+        "Minimum Risk Decode": "eating",
+        "Minimum Risk CTC Loss": 1.1488897800445557
+    },
+    {
+        "Test Id": 43,
+        "Beam Search Decode": "forcer",
+        "Beam Search Forward Log Prob": -5.187999725341797,
+        "Greedy Search Decode": "forcer",
+        "Greedy Search Forward Log Prob": -5.187999725341797,
+        "Minimum Risk Decode": "forces",
+        "Minimum Risk CTC Loss": 0.4629576504230499
+    },
+    {
+        "Test Id": 44,
+        "Beam Search Decode": "ftout",
+        "Beam Search Forward Log Prob": -5.761240005493164,
+        "Greedy Search Decode": "ftout",
+        "Greedy Search Forward Log Prob": -5.761241436004639,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.9555686712265015
+    },
+    {
+        "Test Id": 45,
+        "Beam Search Decode": "oe",
+        "Beam Search Forward Log Prob": -3.206798553466797,
+        "Greedy Search Decode": "oe",
+        "Greedy Search Forward Log Prob": -3.2067980766296387,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 1.2538650035858154
+    },
+    {
+        "Test Id": 46,
+        "Beam Search Decode": "a",
+        "Beam Search Forward Log Prob": -2.9705913066864014,
+        "Greedy Search Decode": "a",
+        "Greedy Search Forward Log Prob": -2.970592737197876,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 1.5330471992492676
+    },
+    {
+        "Test Id": 47,
+        "Beam Search Decode": "beore",
+        "Beam Search Forward Log Prob": -4.041481971740723,
+        "Greedy Search Decode": "beore",
+        "Greedy Search Forward Log Prob": -4.04148530960083,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.37622806429862976
+    },
+    {
+        "Test Id": 48,
+        "Beam Search Decode": "pel",
+        "Beam Search Forward Log Prob": -3.4259843826293945,
+        "Greedy Search Decode": "pel",
+        "Greedy Search Forward Log Prob": -3.425985097885132,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 1.2088532447814941
+    },
+    {
+        "Test Id": 49,
+        "Beam Search Decode": "car",
+        "Beam Search Forward Log Prob": -4.2673115730285645,
+        "Greedy Search Decode": "car",
+        "Greedy Search Forward Log Prob": -4.267313003540039,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.22425271570682526
+    },
+    {
+        "Test Id": 50,
+        "Beam Search Decode": "oinl",
+        "Beam Search Forward Log Prob": -3.9645936489105225,
+        "Greedy Search Decode": "oinl",
+        "Greedy Search Forward Log Prob": -3.964592933654785,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.16006596386432648
+    },
+    {
+        "Test Id": 51,
+        "Beam Search Decode": "eve",
+        "Beam Search Forward Log Prob": -4.16235876083374,
+        "Greedy Search Decode": "eve",
+        "Greedy Search Forward Log Prob": -4.16235876083374,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 0.2302526980638504
+    },
+    {
+        "Test Id": 52,
+        "Beam Search Decode": "m",
+        "Beam Search Forward Log Prob": -2.3114771842956543,
+        "Greedy Search Decode": "m",
+        "Greedy Search Forward Log Prob": -2.3114774227142334,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.8343527317047119
+    },
+    {
+        "Test Id": 53,
+        "Beam Search Decode": "er",
+        "Beam Search Forward Log Prob": -4.621010780334473,
+        "Greedy Search Decode": "er",
+        "Greedy Search Forward Log Prob": -4.621009826660156,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 1.034734845161438
+    },
+    {
+        "Test Id": 54,
+        "Beam Search Decode": "td",
+        "Beam Search Forward Log Prob": -3.1608388423919678,
+        "Greedy Search Decode": "td",
+        "Greedy Search Forward Log Prob": -3.1608405113220215,
+        "Minimum Risk Decode": "without",
+        "Minimum Risk CTC Loss": 1.519180417060852
+    },
+    {
+        "Test Id": 55,
+        "Beam Search Decode": "water",
+        "Beam Search Forward Log Prob": -3.8333067893981934,
+        "Greedy Search Decode": "water",
+        "Greedy Search Forward Log Prob": -3.833310127258301,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.1496516317129135
+    },
+    {
+        "Test Id": 56,
+        "Beam Search Decode": "crr",
+        "Beam Search Forward Log Prob": -3.845456600189209,
+        "Greedy Search Decode": "crr",
+        "Greedy Search Forward Log Prob": -3.845456838607788,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.17686502635478973
+    },
+    {
+        "Test Id": 57,
+        "Beam Search Decode": "ol",
+        "Beam Search Forward Log Prob": -2.0206844806671143,
+        "Greedy Search Decode": "ol",
+        "Greedy Search Forward Log Prob": -2.0206844806671143,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.38457316160202026
+    },
+    {
+        "Test Id": 58,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -3.083021402359009,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -3.083024024963379,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.17883571982383728
+    },
+    {
+        "Test Id": 59,
+        "Beam Search Decode": "al",
+        "Beam Search Forward Log Prob": -1.9656727313995361,
+        "Greedy Search Decode": "al",
+        "Greedy Search Forward Log Prob": -1.9656726121902466,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 1.0361506938934326
+    },
+    {
+        "Test Id": 60,
+        "Beam Search Decode": "mnn",
+        "Beam Search Forward Log Prob": -4.960058689117432,
+        "Greedy Search Decode": "mnn",
+        "Greedy Search Forward Log Prob": -4.9600629806518555,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 1.7497234344482422
+    },
+    {
+        "Test Id": 61,
+        "Beam Search Decode": "efore",
+        "Beam Search Forward Log Prob": -6.159735679626465,
+        "Greedy Search Decode": "efore",
+        "Greedy Search Forward Log Prob": -6.159737586975098,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.3496023118495941
+    },
+    {
+        "Test Id": 62,
+        "Beam Search Decode": "peoreerr",
+        "Beam Search Forward Log Prob": -5.8174285888671875,
+        "Greedy Search Decode": "peoreerr",
+        "Greedy Search Forward Log Prob": -5.8174285888671875,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.9705503582954407
+    },
+    {
+        "Test Id": 63,
+        "Beam Search Decode": "it",
+        "Beam Search Forward Log Prob": -6.428432941436768,
+        "Greedy Search Decode": "it",
+        "Greedy Search Forward Log Prob": -6.428432941436768,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 1.3737983703613281
+    },
+    {
+        "Test Id": 64,
+        "Beam Search Decode": "forces",
+        "Beam Search Forward Log Prob": -5.415336608886719,
+        "Greedy Search Decode": "forces",
+        "Greedy Search Forward Log Prob": -5.415338039398193,
+        "Minimum Risk Decode": "forces",
+        "Minimum Risk CTC Loss": 0.14996430277824402
+    },
+    {
+        "Test Id": 65,
+        "Beam Search Decode": "w",
+        "Beam Search Forward Log Prob": -3.0883047580718994,
+        "Greedy Search Decode": "w",
+        "Greedy Search Forward Log Prob": -3.088306427001953,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 1.3041280508041382
+    },
+    {
+        "Test Id": 66,
+        "Beam Search Decode": "peol",
+        "Beam Search Forward Log Prob": -4.084786415100098,
+        "Greedy Search Decode": "peol",
+        "Greedy Search Forward Log Prob": -4.084786891937256,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 0.36387673020362854
+    },
+    {
+        "Test Id": 67,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -3.5866425037384033,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -3.586643934249878,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.19109410047531128
+    },
+    {
+        "Test Id": 68,
+        "Beam Search Decode": "botme",
+        "Beam Search Forward Log Prob": -5.804386138916016,
+        "Greedy Search Decode": "botme",
+        "Greedy Search Forward Log Prob": -5.804388046264648,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.715546727180481
+    },
+    {
+        "Test Id": 69,
+        "Beam Search Decode": "eve",
+        "Beam Search Forward Log Prob": -1.28751540184021,
+        "Greedy Search Decode": "eve",
+        "Greedy Search Forward Log Prob": -1.2875151634216309,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 0.30508965253829956
+    },
+    {
+        "Test Id": 70,
+        "Beam Search Decode": "er",
+        "Beam Search Forward Log Prob": -3.1213433742523193,
+        "Greedy Search Decode": "er",
+        "Greedy Search Forward Log Prob": -3.1213436126708984,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.5329315662384033
+    },
+    {
+        "Test Id": 71,
+        "Beam Search Decode": "eople",
+        "Beam Search Forward Log Prob": -3.3022587299346924,
+        "Greedy Search Decode": "eople",
+        "Greedy Search Forward Log Prob": -3.3022608757019043,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 0.13879939913749695
+    },
+    {
+        "Test Id": 72,
+        "Beam Search Decode": "rovre",
+        "Beam Search Forward Log Prob": -4.8955464363098145,
+        "Greedy Search Decode": "rovre",
+        "Greedy Search Forward Log Prob": -4.895547866821289,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.7732166647911072
+    },
+    {
+        "Test Id": 73,
+        "Beam Search Decode": "poben",
+        "Beam Search Forward Log Prob": -5.0497822761535645,
+        "Greedy Search Decode": "poben",
+        "Greedy Search Forward Log Prob": -5.0497822761535645,
+        "Minimum Risk Decode": "problem",
+        "Minimum Risk CTC Loss": 0.7574917674064636
+    },
+    {
+        "Test Id": 74,
+        "Beam Search Decode": "vern",
+        "Beam Search Forward Log Prob": -4.4077043533325195,
+        "Greedy Search Decode": "vern",
+        "Greedy Search Forward Log Prob": -4.407707214355469,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 0.5032520890235901
+    },
+    {
+        "Test Id": 75,
+        "Beam Search Decode": "nlso",
+        "Beam Search Forward Log Prob": -3.7187118530273438,
+        "Greedy Search Decode": "nlso",
+        "Greedy Search Forward Log Prob": -3.718712568283081,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.41390714049339294
+    },
+    {
+        "Test Id": 76,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -3.8687148094177246,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -3.8687148094177246,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.09193909913301468
+    },
+    {
+        "Test Id": 77,
+        "Beam Search Decode": "aa",
+        "Beam Search Forward Log Prob": -4.360031604766846,
+        "Greedy Search Decode": "aa",
+        "Greedy Search Forward Log Prob": -4.360030651092529,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.18099476397037506
+    },
+    {
+        "Test Id": 78,
+        "Beam Search Decode": "lso",
+        "Beam Search Forward Log Prob": -2.6891708374023438,
+        "Greedy Search Decode": "lso",
+        "Greedy Search Forward Log Prob": -2.689173698425293,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.4320598840713501
+    },
+    {
+        "Test Id": 79,
+        "Beam Search Decode": "dnoer",
+        "Beam Search Forward Log Prob": -4.06351375579834,
+        "Greedy Search Decode": "dnoer",
+        "Greedy Search Forward Log Prob": -4.0635151863098145,
+        "Minimum Risk Decode": "dinner",
+        "Minimum Risk CTC Loss": 1.1122082471847534
+    },
+    {
+        "Test Id": 80,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -3.1406214237213135,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -3.1406211853027344,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.11506132781505585
+    },
+    {
+        "Test Id": 81,
+        "Beam Search Decode": "nner",
+        "Beam Search Forward Log Prob": -1.4803681373596191,
+        "Greedy Search Decode": "nner",
+        "Greedy Search Forward Log Prob": -1.4803675413131714,
+        "Minimum Risk Decode": "dinner",
+        "Minimum Risk CTC Loss": 0.8776237368583679
+    },
+    {
+        "Test Id": 82,
+        "Beam Search Decode": "rea",
+        "Beam Search Forward Log Prob": -4.321055889129639,
+        "Greedy Search Decode": "rea",
+        "Greedy Search Forward Log Prob": -4.321056365966797,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 0.2872099280357361
+    },
+    {
+        "Test Id": 83,
+        "Beam Search Decode": "atenr",
+        "Beam Search Forward Log Prob": -3.295332908630371,
+        "Greedy Search Decode": "atenr",
+        "Greedy Search Forward Log Prob": -3.2953336238861084,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.3857819437980652
+    },
+    {
+        "Test Id": 84,
+        "Beam Search Decode": "crr",
+        "Beam Search Forward Log Prob": -2.9613020420074463,
+        "Greedy Search Decode": "crr",
+        "Greedy Search Forward Log Prob": -2.9613022804260254,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.34293392300605774
+    },
+    {
+        "Test Id": 85,
+        "Beam Search Decode": "acre",
+        "Beam Search Forward Log Prob": -4.403044700622559,
+        "Greedy Search Decode": "acre",
+        "Greedy Search Forward Log Prob": -4.403045654296875,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 1.6797133684158325
+    },
+    {
+        "Test Id": 86,
+        "Beam Search Decode": "mornen",
+        "Beam Search Forward Log Prob": -2.9438295364379883,
+        "Greedy Search Decode": "mornen",
+        "Greedy Search Forward Log Prob": -2.94382905960083,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 0.6524643898010254
+    },
+    {
+        "Test Id": 87,
+        "Beam Search Decode": "bpp",
+        "Beam Search Forward Log Prob": -4.487748146057129,
+        "Greedy Search Decode": "bpp",
+        "Greedy Search Forward Log Prob": -4.487752914428711,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 1.8488948345184326
+    },
+    {
+        "Test Id": 88,
+        "Beam Search Decode": "avrout",
+        "Beam Search Forward Log Prob": -4.801772594451904,
+        "Greedy Search Decode": "avrout",
+        "Greedy Search Forward Log Prob": -4.8017754554748535,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 1.5995508432388306
+    },
+    {
+        "Test Id": 89,
+        "Beam Search Decode": "peopl",
+        "Beam Search Forward Log Prob": -3.4554951190948486,
+        "Greedy Search Decode": "peopl",
+        "Greedy Search Forward Log Prob": -3.455496072769165,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 0.4928304851055145
+    },
+    {
+        "Test Id": 90,
+        "Beam Search Decode": "chldr",
+        "Beam Search Forward Log Prob": -5.428605079650879,
+        "Greedy Search Decode": "chldr",
+        "Greedy Search Forward Log Prob": -5.428606033325195,
+        "Minimum Risk Decode": "children",
+        "Minimum Risk CTC Loss": 0.5631515383720398
+    },
+    {
+        "Test Id": 91,
+        "Beam Search Decode": "eco",
+        "Beam Search Forward Log Prob": -4.582444190979004,
+        "Greedy Search Decode": "eco",
+        "Greedy Search Forward Log Prob": -4.58244514465332,
+        "Minimum Risk Decode": "become",
+        "Minimum Risk CTC Loss": 0.45172059535980225
+    },
+    {
+        "Test Id": 92,
+        "Beam Search Decode": "also",
+        "Beam Search Forward Log Prob": -2.636359453201294,
+        "Greedy Search Decode": "also",
+        "Greedy Search Forward Log Prob": -2.636362075805664,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.028170175850391388
+    },
+    {
+        "Test Id": 93,
+        "Beam Search Decode": "nver",
+        "Beam Search Forward Log Prob": -3.5840532779693604,
+        "Greedy Search Decode": "nver",
+        "Greedy Search Forward Log Prob": -3.5840535163879395,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.8582342863082886
+    },
+    {
+        "Test Id": 94,
+        "Beam Search Decode": "al",
+        "Beam Search Forward Log Prob": -2.5498340129852295,
+        "Greedy Search Decode": "al",
+        "Greedy Search Forward Log Prob": -2.5498340129852295,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.41859886050224304
+    },
+    {
+        "Test Id": 95,
+        "Beam Search Decode": "mder",
+        "Beam Search Forward Log Prob": -3.8604469299316406,
+        "Greedy Search Decode": "mder",
+        "Greedy Search Forward Log Prob": -3.8604493141174316,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 1.6736490726470947
+    },
+    {
+        "Test Id": 96,
+        "Beam Search Decode": "onl",
+        "Beam Search Forward Log Prob": -2.943441867828369,
+        "Greedy Search Decode": "onl",
+        "Greedy Search Forward Log Prob": -2.9434423446655273,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.14976166188716888
+    },
+    {
+        "Test Id": 97,
+        "Beam Search Decode": "oe",
+        "Beam Search Forward Log Prob": -1.8197189569473267,
+        "Greedy Search Decode": "oe",
+        "Greedy Search Forward Log Prob": -1.819718837738037,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 1.1358243227005005
+    },
+    {
+        "Test Id": 98,
+        "Beam Search Decode": "man",
+        "Beam Search Forward Log Prob": -2.7038233280181885,
+        "Greedy Search Decode": "man",
+        "Greedy Search Forward Log Prob": -2.7038230895996094,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.09908144176006317
+    },
+    {
+        "Test Id": 99,
+        "Beam Search Decode": "prb",
+        "Beam Search Forward Log Prob": -5.9865570068359375,
+        "Greedy Search Decode": "prb",
+        "Greedy Search Forward Log Prob": -5.986557960510254,
+        "Minimum Risk Decode": "problem",
+        "Minimum Risk CTC Loss": 1.7005947828292847
+    },
+    {
+        "Test Id": 100,
+        "Beam Search Decode": "bruthe",
+        "Beam Search Forward Log Prob": -6.2512969970703125,
+        "Greedy Search Decode": "bruthe",
+        "Greedy Search Forward Log Prob": -6.2512969970703125,
+        "Minimum Risk Decode": "brother",
+        "Minimum Risk CTC Loss": 0.4639740288257599
+    },
+    {
+        "Test Id": 101,
+        "Beam Search Decode": "abo",
+        "Beam Search Forward Log Prob": -5.130832195281982,
+        "Greedy Search Decode": "abo",
+        "Greedy Search Forward Log Prob": -5.130832672119141,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.14297567307949066
+    },
+    {
+        "Test Id": 102,
+        "Beam Search Decode": "chee",
+        "Beam Search Forward Log Prob": -6.736617088317871,
+        "Greedy Search Decode": "chee",
+        "Greedy Search Forward Log Prob": -6.736618518829346,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 1.2202242612838745
+    },
+    {
+        "Test Id": 103,
+        "Beam Search Decode": "mor",
+        "Beam Search Forward Log Prob": -2.710003614425659,
+        "Greedy Search Decode": "mor",
+        "Greedy Search Forward Log Prob": -2.7100043296813965,
+        "Minimum Risk Decode": "money",
+        "Minimum Risk CTC Loss": 1.2480299472808838
+    },
+    {
+        "Test Id": 104,
+        "Beam Search Decode": "en",
+        "Beam Search Forward Log Prob": -3.962932825088501,
+        "Greedy Search Decode": "en",
+        "Greedy Search Forward Log Prob": -3.962932586669922,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 1.4795947074890137
+    },
+    {
+        "Test Id": 105,
+        "Beam Search Decode": "othr",
+        "Beam Search Forward Log Prob": -2.7517480850219727,
+        "Greedy Search Decode": "othr",
+        "Greedy Search Forward Log Prob": -2.751748561859131,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.11858928203582764
+    },
+    {
+        "Test Id": 106,
+        "Beam Search Decode": "wa",
+        "Beam Search Forward Log Prob": -3.3018293380737305,
+        "Greedy Search Decode": "wa",
+        "Greedy Search Forward Log Prob": -3.3018298149108887,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 1.3876030445098877
+    },
+    {
+        "Test Id": 107,
+        "Beam Search Decode": "alo",
+        "Beam Search Forward Log Prob": -3.825829029083252,
+        "Greedy Search Decode": "alo",
+        "Greedy Search Forward Log Prob": -3.8258309364318848,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.26524817943573
+    },
+    {
+        "Test Id": 108,
+        "Beam Search Decode": "na",
+        "Beam Search Forward Log Prob": -3.626948833465576,
+        "Greedy Search Decode": "na",
+        "Greedy Search Forward Log Prob": -3.6269495487213135,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 1.4063267707824707
+    },
+    {
+        "Test Id": 109,
+        "Beam Search Decode": "onl",
+        "Beam Search Forward Log Prob": -3.671788215637207,
+        "Greedy Search Decode": "onl",
+        "Greedy Search Forward Log Prob": -3.671787738800049,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.15427877008914948
+    },
+    {
+        "Test Id": 110,
+        "Beam Search Decode": "alo",
+        "Beam Search Forward Log Prob": -3.691469192504883,
+        "Greedy Search Decode": "alo",
+        "Greedy Search Forward Log Prob": -3.691472053527832,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.2730392813682556
+    },
+    {
+        "Test Id": 111,
+        "Beam Search Decode": "tht",
+        "Beam Search Forward Log Prob": -10.05650520324707,
+        "Greedy Search Decode": "tht",
+        "Greedy Search Forward Log Prob": -10.056507110595703,
+        "Minimum Risk Decode": "without",
+        "Minimum Risk CTC Loss": 1.097825527191162
+    },
+    {
+        "Test Id": 112,
+        "Beam Search Decode": "bothrr",
+        "Beam Search Forward Log Prob": -5.24196720123291,
+        "Greedy Search Decode": "bothrr",
+        "Greedy Search Forward Log Prob": -5.241969108581543,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.6699703931808472
+    },
+    {
+        "Test Id": 113,
+        "Beam Search Decode": "one",
+        "Beam Search Forward Log Prob": -4.330809593200684,
+        "Greedy Search Decode": "one",
+        "Greedy Search Forward Log Prob": -4.330810546875,
+        "Minimum Risk Decode": "money",
+        "Minimum Risk CTC Loss": 0.142472043633461
+    },
+    {
+        "Test Id": 114,
+        "Beam Search Decode": "prob",
+        "Beam Search Forward Log Prob": -7.059963226318359,
+        "Greedy Search Decode": "prob",
+        "Greedy Search Forward Log Prob": -7.059965133666992,
+        "Minimum Risk Decode": "problem",
+        "Minimum Risk CTC Loss": 0.9524362087249756
+    },
+    {
+        "Test Id": 115,
+        "Beam Search Decode": "fn",
+        "Beam Search Forward Log Prob": -2.8778998851776123,
+        "Greedy Search Decode": "fn",
+        "Greedy Search Forward Log Prob": -2.877901554107666,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.8369327783584595
+    },
+    {
+        "Test Id": 116,
+        "Beam Search Decode": "abuu",
+        "Beam Search Forward Log Prob": -6.2637834548950195,
+        "Greedy Search Decode": "abuu",
+        "Greedy Search Forward Log Prob": -6.263787269592285,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.5518893599510193
+    },
+    {
+        "Test Id": 117,
+        "Beam Search Decode": "in",
+        "Beam Search Forward Log Prob": -2.164210081100464,
+        "Greedy Search Decode": "in",
+        "Greedy Search Forward Log Prob": -2.164212226867676,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.21711120009422302
+    },
+    {
+        "Test Id": 118,
+        "Beam Search Decode": "no",
+        "Beam Search Forward Log Prob": -3.5689189434051514,
+        "Greedy Search Decode": "no",
+        "Greedy Search Forward Log Prob": -3.5689196586608887,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 1.318808674812317
+    },
+    {
+        "Test Id": 119,
+        "Beam Search Decode": "te",
+        "Beam Search Forward Log Prob": -3.623028039932251,
+        "Greedy Search Decode": "te",
+        "Greedy Search Forward Log Prob": -3.6230289936065674,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.5085217952728271
+    },
+    {
+        "Test Id": 120,
+        "Beam Search Decode": "n",
+        "Beam Search Forward Log Prob": -2.484102249145508,
+        "Greedy Search Decode": "n",
+        "Greedy Search Forward Log Prob": -2.484102249145508,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.7838689684867859
+    },
+    {
+        "Test Id": 121,
+        "Beam Search Decode": "atth",
+        "Beam Search Forward Log Prob": -6.4120988845825195,
+        "Greedy Search Decode": "atth",
+        "Greedy Search Forward Log Prob": -6.412099361419678,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 1.8007233142852783
+    },
+    {
+        "Test Id": 122,
+        "Beam Search Decode": "so",
+        "Beam Search Forward Log Prob": -3.172687292098999,
+        "Greedy Search Decode": "so",
+        "Greedy Search Forward Log Prob": -3.1726889610290527,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.5725557804107666
+    },
+    {
+        "Test Id": 123,
+        "Beam Search Decode": "alwa",
+        "Beam Search Forward Log Prob": -6.196865081787109,
+        "Greedy Search Decode": "alwa",
+        "Greedy Search Forward Log Prob": -6.196865558624268,
+        "Minimum Risk Decode": "always",
+        "Minimum Risk CTC Loss": 0.33866044878959656
+    },
+    {
+        "Test Id": 124,
+        "Beam Search Decode": "never",
+        "Beam Search Forward Log Prob": -2.493180513381958,
+        "Greedy Search Decode": "never",
+        "Greedy Search Forward Log Prob": -2.49318265914917,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.0157586969435215
+    },
+    {
+        "Test Id": 125,
+        "Beam Search Decode": "about",
+        "Beam Search Forward Log Prob": -5.430363178253174,
+        "Greedy Search Decode": "about",
+        "Greedy Search Forward Log Prob": -5.430365085601807,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.1858557164669037
+    },
+    {
+        "Test Id": 126,
+        "Beam Search Decode": "oo",
+        "Beam Search Forward Log Prob": -3.2102270126342773,
+        "Greedy Search Decode": "oo",
+        "Greedy Search Forward Log Prob": -3.2102274894714355,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 1.0089945793151855
+    },
+    {
+        "Test Id": 127,
+        "Beam Search Decode": "rth",
+        "Beam Search Forward Log Prob": -4.022581100463867,
+        "Greedy Search Decode": "rth",
+        "Greedy Search Forward Log Prob": -4.022582054138184,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 1.355050802230835
+    },
+    {
+        "Test Id": 128,
+        "Beam Search Decode": "nver",
+        "Beam Search Forward Log Prob": -4.829226016998291,
+        "Greedy Search Decode": "nver",
+        "Greedy Search Forward Log Prob": -4.829224586486816,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.4671343266963959
+    },
+    {
+        "Test Id": 129,
+        "Beam Search Decode": "o",
+        "Beam Search Forward Log Prob": -2.3227124214172363,
+        "Greedy Search Decode": "o",
+        "Greedy Search Forward Log Prob": -2.3227128982543945,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.5197783708572388
+    },
+    {
+        "Test Id": 130,
+        "Beam Search Decode": "er",
+        "Beam Search Forward Log Prob": -3.6477034091949463,
+        "Greedy Search Decode": "er",
+        "Greedy Search Forward Log Prob": -3.6477038860321045,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 1.0048165321350098
+    },
+    {
+        "Test Id": 131,
+        "Beam Search Decode": "crr",
+        "Beam Search Forward Log Prob": -3.099292278289795,
+        "Greedy Search Decode": "crr",
+        "Greedy Search Forward Log Prob": -3.099292278289795,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.33744293451309204
+    },
+    {
+        "Test Id": 132,
+        "Beam Search Decode": "awa",
+        "Beam Search Forward Log Prob": -5.354294300079346,
+        "Greedy Search Decode": "awa",
+        "Greedy Search Forward Log Prob": -5.354295253753662,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.2269149273633957
+    },
+    {
+        "Test Id": 133,
+        "Beam Search Decode": "mae",
+        "Beam Search Forward Log Prob": -5.165976047515869,
+        "Greedy Search Decode": "mae",
+        "Greedy Search Forward Log Prob": -5.165976524353027,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.5396462082862854
+    },
+    {
+        "Test Id": 134,
+        "Beam Search Decode": "om",
+        "Beam Search Forward Log Prob": -5.696000099182129,
+        "Greedy Search Decode": "om",
+        "Greedy Search Forward Log Prob": -5.696000099182129,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 1.123915433883667
+    },
+    {
+        "Test Id": 135,
+        "Beam Search Decode": "r",
+        "Beam Search Forward Log Prob": -2.1368660926818848,
+        "Greedy Search Decode": "r",
+        "Greedy Search Forward Log Prob": -2.136866331100464,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 1.037976622581482
+    },
+    {
+        "Test Id": 136,
+        "Beam Search Decode": "recomm",
+        "Beam Search Forward Log Prob": -7.899720191955566,
+        "Greedy Search Decode": "recomm",
+        "Greedy Search Forward Log Prob": -7.899723529815674,
+        "Minimum Risk Decode": "become",
+        "Minimum Risk CTC Loss": 1.2756503820419312
+    },
+    {
+        "Test Id": 137,
+        "Beam Search Decode": "abu",
+        "Beam Search Forward Log Prob": -3.8503594398498535,
+        "Greedy Search Decode": "abu",
+        "Greedy Search Forward Log Prob": -3.850360870361328,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.4195965528488159
+    },
+    {
+        "Test Id": 138,
+        "Beam Search Decode": "rseo",
+        "Beam Search Forward Log Prob": -2.468864917755127,
+        "Greedy Search Decode": "rseo",
+        "Greedy Search Forward Log Prob": -2.468867063522339,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 1.7224329710006714
+    },
+    {
+        "Test Id": 139,
+        "Beam Search Decode": "aft",
+        "Beam Search Forward Log Prob": -4.0384016036987305,
+        "Greedy Search Decode": "aft",
+        "Greedy Search Forward Log Prob": -4.038404941558838,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.18720737099647522
+    },
+    {
+        "Test Id": 140,
+        "Beam Search Decode": "eround",
+        "Beam Search Forward Log Prob": -6.372669219970703,
+        "Greedy Search Decode": "eround",
+        "Greedy Search Forward Log Prob": -6.372669219970703,
+        "Minimum Risk Decode": "around",
+        "Minimum Risk CTC Loss": 0.8757217526435852
+    },
+    {
+        "Test Id": 141,
+        "Beam Search Decode": "pead",
+        "Beam Search Forward Log Prob": -5.907297134399414,
+        "Greedy Search Decode": "pead",
+        "Greedy Search Forward Log Prob": -5.907297611236572,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 1.9595037698745728
+    },
+    {
+        "Test Id": 142,
+        "Beam Search Decode": "or",
+        "Beam Search Forward Log Prob": -2.8069229125976562,
+        "Greedy Search Decode": "or",
+        "Greedy Search Forward Log Prob": -2.8069255352020264,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 0.942907452583313
+    },
+    {
+        "Test Id": 143,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -2.766340494155884,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -2.7663402557373047,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.09849321097135544
+    },
+    {
+        "Test Id": 144,
+        "Beam Search Decode": "l",
+        "Beam Search Forward Log Prob": -3.071932077407837,
+        "Greedy Search Decode": "l",
+        "Greedy Search Forward Log Prob": -3.071932077407837,
+        "Minimum Risk Decode": "always",
+        "Minimum Risk CTC Loss": 0.7032265067100525
+    },
+    {
+        "Test Id": 145,
+        "Beam Search Decode": "ol",
+        "Beam Search Forward Log Prob": -3.1789286136627197,
+        "Greedy Search Decode": "ol",
+        "Greedy Search Forward Log Prob": -3.178929567337036,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 2.1036360263824463
+    },
+    {
+        "Test Id": 146,
+        "Beam Search Decode": "",
+        "Beam Search Forward Log Prob": -3.39255690574646,
+        "Greedy Search Decode": "",
+        "Greedy Search Forward Log Prob": -3.392557382583618,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.6502427458763123
+    },
+    {
+        "Test Id": 147,
+        "Beam Search Decode": "",
+        "Beam Search Forward Log Prob": -3.5814361572265625,
+        "Greedy Search Decode": "",
+        "Greedy Search Forward Log Prob": -3.581437349319458,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.9675551056861877
+    },
+    {
+        "Test Id": 148,
+        "Beam Search Decode": "ne",
+        "Beam Search Forward Log Prob": -4.279613018035889,
+        "Greedy Search Decode": "ne",
+        "Greedy Search Forward Log Prob": -4.279614448547363,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 3.896204948425293
+    },
+    {
+        "Test Id": 149,
+        "Beam Search Decode": "ea",
+        "Beam Search Forward Log Prob": -3.053179979324341,
+        "Greedy Search Decode": "ea",
+        "Greedy Search Forward Log Prob": -3.0531797409057617,
+        "Minimum Risk Decode": "eating",
+        "Minimum Risk CTC Loss": 0.7010877132415771
+    },
+    {
+        "Test Id": 150,
+        "Beam Search Decode": "int",
+        "Beam Search Forward Log Prob": -1.714767336845398,
+        "Greedy Search Decode": "int",
+        "Greedy Search Forward Log Prob": -1.7147666215896606,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.477751225233078
+    },
+    {
+        "Test Id": 151,
+        "Beam Search Decode": "er",
+        "Beam Search Forward Log Prob": -4.208237648010254,
+        "Greedy Search Decode": "er",
+        "Greedy Search Forward Log Prob": -4.2082390785217285,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.19764851033687592
+    },
+    {
+        "Test Id": 152,
+        "Beam Search Decode": "svrr",
+        "Beam Search Forward Log Prob": -5.542576313018799,
+        "Greedy Search Decode": "svrr",
+        "Greedy Search Forward Log Prob": -5.54257869720459,
+        "Minimum Risk Decode": "several",
+        "Minimum Risk CTC Loss": 0.8460193276405334
+    },
+    {
+        "Test Id": 153,
+        "Beam Search Decode": "shlersss",
+        "Beam Search Forward Log Prob": -8.401023864746094,
+        "Greedy Search Decode": "shlersss",
+        "Greedy Search Forward Log Prob": -8.401023864746094,
+        "Minimum Risk Decode": "shellfish",
+        "Minimum Risk CTC Loss": 1.4158461093902588
+    },
+    {
+        "Test Id": 154,
+        "Beam Search Decode": "aver",
+        "Beam Search Forward Log Prob": -1.9794014692306519,
+        "Greedy Search Decode": "aver",
+        "Greedy Search Forward Log Prob": -1.9793996810913086,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.4920613169670105
+    },
+    {
+        "Test Id": 155,
+        "Beam Search Decode": "en",
+        "Beam Search Forward Log Prob": -2.508056402206421,
+        "Greedy Search Decode": "en",
+        "Greedy Search Forward Log Prob": -2.508056640625,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 1.0725319385528564
+    },
+    {
+        "Test Id": 156,
+        "Beam Search Decode": "s",
+        "Beam Search Forward Log Prob": -2.9579389095306396,
+        "Greedy Search Decode": "s",
+        "Greedy Search Forward Log Prob": -2.957939386367798,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 2.0210063457489014
+    },
+    {
+        "Test Id": 157,
+        "Beam Search Decode": "athr",
+        "Beam Search Forward Log Prob": -2.5537872314453125,
+        "Greedy Search Decode": "athr",
+        "Greedy Search Forward Log Prob": -2.553788661956787,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 1.266426682472229
+    },
+    {
+        "Test Id": 158,
+        "Beam Search Decode": "abt",
+        "Beam Search Forward Log Prob": -6.4180803298950195,
+        "Greedy Search Decode": "abt",
+        "Greedy Search Forward Log Prob": -6.418083190917969,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.5491970777511597
+    },
+    {
+        "Test Id": 159,
+        "Beam Search Decode": "tut",
+        "Beam Search Forward Log Prob": -4.462780952453613,
+        "Greedy Search Decode": "tut",
+        "Greedy Search Forward Log Prob": -4.46278190612793,
+        "Minimum Risk Decode": "without",
+        "Minimum Risk CTC Loss": 1.0024957656860352
+    },
+    {
+        "Test Id": 160,
+        "Beam Search Decode": "ate",
+        "Beam Search Forward Log Prob": -3.6610255241394043,
+        "Greedy Search Decode": "ate",
+        "Greedy Search Forward Log Prob": -3.6610279083251953,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.42363569140434265
+    },
+    {
+        "Test Id": 161,
+        "Beam Search Decode": "ner",
+        "Beam Search Forward Log Prob": -2.3764395713806152,
+        "Greedy Search Decode": "ner",
+        "Greedy Search Forward Log Prob": -2.3764424324035645,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.26358336210250854
+    },
+    {
+        "Test Id": 162,
+        "Beam Search Decode": "arter",
+        "Beam Search Forward Log Prob": -2.5343611240386963,
+        "Greedy Search Decode": "arter",
+        "Greedy Search Forward Log Prob": -2.5343618392944336,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 0.6608157753944397
+    },
+    {
+        "Test Id": 163,
+        "Beam Search Decode": "ollo",
+        "Beam Search Forward Log Prob": -4.153334617614746,
+        "Greedy Search Decode": "ollo",
+        "Greedy Search Forward Log Prob": -4.153337001800537,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.36645644903182983
+    },
+    {
+        "Test Id": 164,
+        "Beam Search Decode": "serer",
+        "Beam Search Forward Log Prob": -5.80708122253418,
+        "Greedy Search Decode": "serer",
+        "Greedy Search Forward Log Prob": -5.807080268859863,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.6801344156265259
+    },
+    {
+        "Test Id": 165,
+        "Beam Search Decode": "open",
+        "Beam Search Forward Log Prob": -2.042602300643921,
+        "Greedy Search Decode": "open",
+        "Greedy Search Forward Log Prob": -2.0426042079925537,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 0.05343657359480858
+    },
+    {
+        "Test Id": 166,
+        "Beam Search Decode": "abou",
+        "Beam Search Forward Log Prob": -4.844552516937256,
+        "Greedy Search Decode": "abou",
+        "Greedy Search Forward Log Prob": -4.844555377960205,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.24228447675704956
+    },
+    {
+        "Test Id": 167,
+        "Beam Search Decode": "ol",
+        "Beam Search Forward Log Prob": -3.4372732639312744,
+        "Greedy Search Decode": "ol",
+        "Greedy Search Forward Log Prob": -3.4372730255126953,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.34726881980895996
+    },
+    {
+        "Test Id": 168,
+        "Beam Search Decode": "mof",
+        "Beam Search Forward Log Prob": -2.82922625541687,
+        "Greedy Search Decode": "mof",
+        "Greedy Search Forward Log Prob": -2.8292274475097656,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 1.7927625179290771
+    },
+    {
+        "Test Id": 169,
+        "Beam Search Decode": "vver",
+        "Beam Search Forward Log Prob": -3.9197211265563965,
+        "Greedy Search Decode": "vver",
+        "Greedy Search Forward Log Prob": -3.9197206497192383,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.26781678199768066
+    },
+    {
+        "Test Id": 170,
+        "Beam Search Decode": "other",
+        "Beam Search Forward Log Prob": -4.0881242752075195,
+        "Greedy Search Decode": "other",
+        "Greedy Search Forward Log Prob": -4.088126182556152,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.16549184918403625
+    },
+    {
+        "Test Id": 171,
+        "Beam Search Decode": "ote",
+        "Beam Search Forward Log Prob": -5.300835132598877,
+        "Greedy Search Decode": "ote",
+        "Greedy Search Forward Log Prob": -5.30083703994751,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.6980639696121216
+    },
+    {
+        "Test Id": 172,
+        "Beam Search Decode": "ater",
+        "Beam Search Forward Log Prob": -4.304145812988281,
+        "Greedy Search Decode": "ater",
+        "Greedy Search Forward Log Prob": -4.304147720336914,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.3460114598274231
+    },
+    {
+        "Test Id": 173,
+        "Beam Search Decode": "ff",
+        "Beam Search Forward Log Prob": -3.5172009468078613,
+        "Greedy Search Decode": "ff",
+        "Greedy Search Forward Log Prob": -3.517202138900757,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 1.6416109800338745
+    },
+    {
+        "Test Id": 174,
+        "Beam Search Decode": "st",
+        "Beam Search Forward Log Prob": -6.6751813888549805,
+        "Greedy Search Decode": "st",
+        "Greedy Search Forward Log Prob": -6.675183296203613,
+        "Minimum Risk Decode": "study",
+        "Minimum Risk CTC Loss": 1.4668312072753906
+    },
+    {
+        "Test Id": 175,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -3.213294744491577,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -3.2132956981658936,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.22535589337348938
+    },
+    {
+        "Test Id": 176,
+        "Beam Search Decode": "aexer",
+        "Beam Search Forward Log Prob": -4.950075149536133,
+        "Greedy Search Decode": "aexer",
+        "Greedy Search Forward Log Prob": -4.950076103210449,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.9264465570449829
+    },
+    {
+        "Test Id": 177,
+        "Beam Search Decode": "ol",
+        "Beam Search Forward Log Prob": -3.7218875885009766,
+        "Greedy Search Decode": "ol",
+        "Greedy Search Forward Log Prob": -3.72188663482666,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.7938015460968018
+    },
+    {
+        "Test Id": 178,
+        "Beam Search Decode": "anto",
+        "Beam Search Forward Log Prob": -2.109057664871216,
+        "Greedy Search Decode": "anto",
+        "Greedy Search Forward Log Prob": -2.109057903289795,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.8144341111183167
+    },
+    {
+        "Test Id": 179,
+        "Beam Search Decode": "n",
+        "Beam Search Forward Log Prob": -2.409318685531616,
+        "Greedy Search Decode": "n",
+        "Greedy Search Forward Log Prob": -2.4093191623687744,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 1.7403063774108887
+    },
+    {
+        "Test Id": 180,
+        "Beam Search Decode": "nohn",
+        "Beam Search Forward Log Prob": -3.786465644836426,
+        "Greedy Search Decode": "nohn",
+        "Greedy Search Forward Log Prob": -3.786466121673584,
+        "Minimum Risk Decode": "nothing",
+        "Minimum Risk CTC Loss": 0.348724365234375
+    },
+    {
+        "Test Id": 181,
+        "Beam Search Decode": "ln",
+        "Beam Search Forward Log Prob": -4.264260292053223,
+        "Greedy Search Decode": "ln",
+        "Greedy Search Forward Log Prob": -4.264259338378906,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 0.473587304353714
+    },
+    {
+        "Test Id": 182,
+        "Beam Search Decode": "maan",
+        "Beam Search Forward Log Prob": -4.706908702850342,
+        "Greedy Search Decode": "maan",
+        "Greedy Search Forward Log Prob": -4.706908702850342,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.27372613549232483
+    },
+    {
+        "Test Id": 183,
+        "Beam Search Decode": "rint",
+        "Beam Search Forward Log Prob": -3.094668388366699,
+        "Greedy Search Decode": "rint",
+        "Greedy Search Forward Log Prob": -3.0946707725524902,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.9994832873344421
+    },
+    {
+        "Test Id": 184,
+        "Beam Search Decode": "maan",
+        "Beam Search Forward Log Prob": -6.137146472930908,
+        "Greedy Search Decode": "maan",
+        "Greedy Search Forward Log Prob": -6.137147903442383,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.5727283954620361
+    },
+    {
+        "Test Id": 185,
+        "Beam Search Decode": "aften",
+        "Beam Search Forward Log Prob": -3.6078100204467773,
+        "Greedy Search Decode": "aften",
+        "Greedy Search Forward Log Prob": -3.6078109741210938,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.4750576317310333
+    },
+    {
+        "Test Id": 186,
+        "Beam Search Decode": "tab",
+        "Beam Search Forward Log Prob": -2.74062180519104,
+        "Greedy Search Decode": "tab",
+        "Greedy Search Forward Log Prob": -2.7406229972839355,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.8050518035888672
+    },
+    {
+        "Test Id": 187,
+        "Beam Search Decode": "eve",
+        "Beam Search Forward Log Prob": -2.2120864391326904,
+        "Greedy Search Decode": "eve",
+        "Greedy Search Forward Log Prob": -2.2120864391326904,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.7063518166542053
+    },
+    {
+        "Test Id": 188,
+        "Beam Search Decode": "onl",
+        "Beam Search Forward Log Prob": -2.629119634628296,
+        "Greedy Search Decode": "onl",
+        "Greedy Search Forward Log Prob": -2.6291191577911377,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.10288301110267639
+    },
+    {
+        "Test Id": 189,
+        "Beam Search Decode": "ot",
+        "Beam Search Forward Log Prob": -4.675762176513672,
+        "Greedy Search Decode": "ot",
+        "Greedy Search Forward Log Prob": -4.675763130187988,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.6361955404281616
+    },
+    {
+        "Test Id": 190,
+        "Beam Search Decode": "ab",
+        "Beam Search Forward Log Prob": -2.2232725620269775,
+        "Greedy Search Decode": "ab",
+        "Greedy Search Forward Log Prob": -2.223271131515503,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 1.272139310836792
+    },
+    {
+        "Test Id": 191,
+        "Beam Search Decode": "crrr",
+        "Beam Search Forward Log Prob": -4.369640827178955,
+        "Greedy Search Decode": "crrr",
+        "Greedy Search Forward Log Prob": -4.36964225769043,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.4150428771972656
+    },
+    {
+        "Test Id": 192,
+        "Beam Search Decode": "oprever",
+        "Beam Search Forward Log Prob": -5.944281101226807,
+        "Greedy Search Decode": "oprever",
+        "Greedy Search Forward Log Prob": -5.944283485412598,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 1.5958582162857056
+    },
+    {
+        "Test Id": 193,
+        "Beam Search Decode": "hehlfi",
+        "Beam Search Forward Log Prob": -13.441791534423828,
+        "Greedy Search Decode": "hehlfi",
+        "Greedy Search Forward Log Prob": -13.441791534423828,
+        "Minimum Risk Decode": "shellfish",
+        "Minimum Risk CTC Loss": 0.6380589604377747
+    },
+    {
+        "Test Id": 194,
+        "Beam Search Decode": "rnother",
+        "Beam Search Forward Log Prob": -6.213463306427002,
+        "Greedy Search Decode": "rnother",
+        "Greedy Search Forward Log Prob": -6.213465690612793,
+        "Minimum Risk Decode": "another",
+        "Minimum Risk CTC Loss": 0.2815348505973816
+    },
+    {
+        "Test Id": 195,
+        "Beam Search Decode": "tder",
+        "Beam Search Forward Log Prob": -3.7113115787506104,
+        "Greedy Search Decode": "tder",
+        "Greedy Search Forward Log Prob": -3.7113120555877686,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 0.605423629283905
+    },
+    {
+        "Test Id": 196,
+        "Beam Search Decode": "mcom",
+        "Beam Search Forward Log Prob": -8.059837341308594,
+        "Greedy Search Decode": "mcom",
+        "Greedy Search Forward Log Prob": -8.059837341308594,
+        "Minimum Risk Decode": "become",
+        "Minimum Risk CTC Loss": 0.8909114003181458
+    },
+    {
+        "Test Id": 197,
+        "Beam Search Decode": "l",
+        "Beam Search Forward Log Prob": -3.673673152923584,
+        "Greedy Search Decode": "l",
+        "Greedy Search Forward Log Prob": -3.673675537109375,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.45956987142562866
+    },
+    {
+        "Test Id": 198,
+        "Beam Search Decode": "anve",
+        "Beam Search Forward Log Prob": -2.204671859741211,
+        "Greedy Search Decode": "anve",
+        "Greedy Search Forward Log Prob": -2.204674243927002,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.9552308917045593
+    },
+    {
+        "Test Id": 199,
+        "Beam Search Decode": "neve",
+        "Beam Search Forward Log Prob": -1.8511524200439453,
+        "Greedy Search Decode": "neve",
+        "Greedy Search Forward Log Prob": -1.851151943206787,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.1839953362941742
+    },
+    {
+        "Test Id": 200,
+        "Beam Search Decode": "re",
+        "Beam Search Forward Log Prob": -3.412562847137451,
+        "Greedy Search Decode": "re",
+        "Greedy Search Forward Log Prob": -3.412562847137451,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 2.1489458084106445
+    },
+    {
+        "Test Id": 201,
+        "Beam Search Decode": "ooll",
+        "Beam Search Forward Log Prob": -4.323580265045166,
+        "Greedy Search Decode": "ooll",
+        "Greedy Search Forward Log Prob": -4.323581695556641,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.6084995865821838
+    },
+    {
+        "Test Id": 202,
+        "Beam Search Decode": "de",
+        "Beam Search Forward Log Prob": -4.714780807495117,
+        "Greedy Search Decode": "de",
+        "Greedy Search Forward Log Prob": -4.714783668518066,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 0.7795600891113281
+    },
+    {
+        "Test Id": 203,
+        "Beam Search Decode": "erea",
+        "Beam Search Forward Log Prob": -6.062598705291748,
+        "Greedy Search Decode": "erea",
+        "Greedy Search Forward Log Prob": -6.06259822845459,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 0.6254885792732239
+    },
+    {
+        "Test Id": 204,
+        "Beam Search Decode": "ot",
+        "Beam Search Forward Log Prob": -3.017918109893799,
+        "Greedy Search Decode": "ot",
+        "Greedy Search Forward Log Prob": -3.017918586730957,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.7230015993118286
+    },
+    {
+        "Test Id": 205,
+        "Beam Search Decode": "",
+        "Beam Search Forward Log Prob": -3.087879180908203,
+        "Greedy Search Decode": "",
+        "Greedy Search Forward Log Prob": -3.087883472442627,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.9913139343261719
+    },
+    {
+        "Test Id": 206,
+        "Beam Search Decode": "venn",
+        "Beam Search Forward Log Prob": -2.9374539852142334,
+        "Greedy Search Decode": "venn",
+        "Greedy Search Forward Log Prob": -2.937455177307129,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 0.7691137790679932
+    },
+    {
+        "Test Id": 207,
+        "Beam Search Decode": "nen",
+        "Beam Search Forward Log Prob": -2.8719725608825684,
+        "Greedy Search Decode": "nen",
+        "Greedy Search Forward Log Prob": -2.87197208404541,
+        "Minimum Risk Decode": "money",
+        "Minimum Risk CTC Loss": 1.1618695259094238
+    },
+    {
+        "Test Id": 208,
+        "Beam Search Decode": "ter",
+        "Beam Search Forward Log Prob": -2.8089234828948975,
+        "Greedy Search Decode": "ter",
+        "Greedy Search Forward Log Prob": -2.8089258670806885,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 1.6918100118637085
+    },
+    {
+        "Test Id": 209,
+        "Beam Search Decode": "waer",
+        "Beam Search Forward Log Prob": -4.22746467590332,
+        "Greedy Search Decode": "waer",
+        "Greedy Search Forward Log Prob": -4.227466106414795,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.5002750158309937
+    },
+    {
+        "Test Id": 210,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -3.2681915760040283,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -3.2681922912597656,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.3940722644329071
+    },
+    {
+        "Test Id": 211,
+        "Beam Search Decode": "no",
+        "Beam Search Forward Log Prob": -2.396367311477661,
+        "Greedy Search Decode": "no",
+        "Greedy Search Forward Log Prob": -2.3963680267333984,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 0.6232371926307678
+    },
+    {
+        "Test Id": 212,
+        "Beam Search Decode": "till",
+        "Beam Search Forward Log Prob": -3.8476479053497314,
+        "Greedy Search Decode": "till",
+        "Greedy Search Forward Log Prob": -3.8476500511169434,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 2.2594614028930664
+    },
+    {
+        "Test Id": 213,
+        "Beam Search Decode": "n",
+        "Beam Search Forward Log Prob": -1.9946532249450684,
+        "Greedy Search Decode": "n",
+        "Greedy Search Forward Log Prob": -1.9946532249450684,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.46185004711151123
+    },
+    {
+        "Test Id": 214,
+        "Beam Search Decode": "rea",
+        "Beam Search Forward Log Prob": -3.5712404251098633,
+        "Greedy Search Decode": "rea",
+        "Greedy Search Forward Log Prob": -3.5712404251098633,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 0.4086785614490509
+    },
+    {
+        "Test Id": 215,
+        "Beam Search Decode": "etie",
+        "Beam Search Forward Log Prob": -7.165653705596924,
+        "Greedy Search Decode": "etie",
+        "Greedy Search Forward Log Prob": -7.165657043457031,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 1.5608984231948853
+    },
+    {
+        "Test Id": 216,
+        "Beam Search Decode": "aoft",
+        "Beam Search Forward Log Prob": -2.512394428253174,
+        "Greedy Search Decode": "aoft",
+        "Greedy Search Forward Log Prob": -2.512397050857544,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 2.0009381771087646
+    },
+    {
+        "Test Id": 217,
+        "Beam Search Decode": "t",
+        "Beam Search Forward Log Prob": -2.1162960529327393,
+        "Greedy Search Decode": "t",
+        "Greedy Search Forward Log Prob": -2.1162986755371094,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.8909918665885925
+    },
+    {
+        "Test Id": 218,
+        "Beam Search Decode": "rea",
+        "Beam Search Forward Log Prob": -4.324844837188721,
+        "Greedy Search Decode": "rea",
+        "Greedy Search Forward Log Prob": -4.324843406677246,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 1.253589391708374
+    },
+    {
+        "Test Id": 219,
+        "Beam Search Decode": "ostm",
+        "Beam Search Forward Log Prob": -3.9953079223632812,
+        "Greedy Search Decode": "ostm",
+        "Greedy Search Forward Log Prob": -3.995307445526123,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 0.9284538626670837
+    },
+    {
+        "Test Id": 220,
+        "Beam Search Decode": "bdin",
+        "Beam Search Forward Log Prob": -5.841601371765137,
+        "Greedy Search Decode": "bdin",
+        "Greedy Search Forward Log Prob": -5.8416008949279785,
+        "Minimum Risk Decode": "dinner",
+        "Minimum Risk CTC Loss": 1.2193971872329712
+    },
+    {
+        "Test Id": 221,
+        "Beam Search Decode": "ter",
+        "Beam Search Forward Log Prob": -2.3862032890319824,
+        "Greedy Search Decode": "ter",
+        "Greedy Search Forward Log Prob": -2.3862037658691406,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.2544073462486267
+    },
+    {
+        "Test Id": 222,
+        "Beam Search Decode": "veer",
+        "Beam Search Forward Log Prob": -4.888904094696045,
+        "Greedy Search Decode": "veer",
+        "Greedy Search Forward Log Prob": -4.888905048370361,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.6518375873565674
+    },
+    {
+        "Test Id": 223,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -5.179313659667969,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -5.179314613342285,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 1.2834420204162598
+    },
+    {
+        "Test Id": 224,
+        "Beam Search Decode": "ber",
+        "Beam Search Forward Log Prob": -5.017935276031494,
+        "Greedy Search Decode": "ber",
+        "Greedy Search Forward Log Prob": -5.017934799194336,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.5295928120613098
+    },
+    {
+        "Test Id": 225,
+        "Beam Search Decode": "mman",
+        "Beam Search Forward Log Prob": -4.764344692230225,
+        "Greedy Search Decode": "mman",
+        "Greedy Search Forward Log Prob": -4.764345169067383,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.5655195116996765
+    },
+    {
+        "Test Id": 226,
+        "Beam Search Decode": "somet",
+        "Beam Search Forward Log Prob": -6.0099616050720215,
+        "Greedy Search Decode": "somet",
+        "Greedy Search Forward Log Prob": -6.009963035583496,
+        "Minimum Risk Decode": "sometimes",
+        "Minimum Risk CTC Loss": 0.7048609852790833
+    },
+    {
+        "Test Id": 227,
+        "Beam Search Decode": "nto",
+        "Beam Search Forward Log Prob": -2.5882656574249268,
+        "Greedy Search Decode": "nto",
+        "Greedy Search Forward Log Prob": -2.5882673263549805,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.17173422873020172
+    },
+    {
+        "Test Id": 228,
+        "Beam Search Decode": "noun",
+        "Beam Search Forward Log Prob": -4.80063009262085,
+        "Greedy Search Decode": "noun",
+        "Greedy Search Forward Log Prob": -4.80063009262085,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 1.3050700426101685
+    },
+    {
+        "Test Id": 229,
+        "Beam Search Decode": "shhlf",
+        "Beam Search Forward Log Prob": -7.8921356201171875,
+        "Greedy Search Decode": "shhlf",
+        "Greedy Search Forward Log Prob": -7.8921356201171875,
+        "Minimum Risk Decode": "shellfish",
+        "Minimum Risk CTC Loss": 1.134827971458435
+    },
+    {
+        "Test Id": 230,
+        "Beam Search Decode": "stem",
+        "Beam Search Forward Log Prob": -6.829512119293213,
+        "Greedy Search Decode": "stem",
+        "Greedy Search Forward Log Prob": -6.829512596130371,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 1.7243260145187378
+    },
+    {
+        "Test Id": 231,
+        "Beam Search Decode": "a",
+        "Beam Search Forward Log Prob": -3.8819069862365723,
+        "Greedy Search Decode": "a",
+        "Greedy Search Forward Log Prob": -3.881906747817993,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.8022829294204712
+    },
+    {
+        "Test Id": 232,
+        "Beam Search Decode": "ainnto",
+        "Beam Search Forward Log Prob": -3.1101624965667725,
+        "Greedy Search Decode": "ainnto",
+        "Greedy Search Forward Log Prob": -3.1101624965667725,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.972848117351532
+    },
+    {
+        "Test Id": 233,
+        "Beam Search Decode": "nout",
+        "Beam Search Forward Log Prob": -5.423880100250244,
+        "Greedy Search Decode": "nout",
+        "Greedy Search Forward Log Prob": -5.423879623413086,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 1.6965537071228027
+    },
+    {
+        "Test Id": 234,
+        "Beam Search Decode": "ar",
+        "Beam Search Forward Log Prob": -3.5012125968933105,
+        "Greedy Search Decode": "ar",
+        "Greedy Search Forward Log Prob": -3.5012142658233643,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 1.38703453540802
+    },
+    {
+        "Test Id": 235,
+        "Beam Search Decode": "n",
+        "Beam Search Forward Log Prob": -2.031383991241455,
+        "Greedy Search Decode": "n",
+        "Greedy Search Forward Log Prob": -2.031388521194458,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.7792624831199646
+    },
+    {
+        "Test Id": 236,
+        "Beam Search Decode": "e",
+        "Beam Search Forward Log Prob": -2.006920576095581,
+        "Greedy Search Decode": "e",
+        "Greedy Search Forward Log Prob": -2.006920337677002,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 1.3699777126312256
+    },
+    {
+        "Test Id": 237,
+        "Beam Search Decode": "aafte",
+        "Beam Search Forward Log Prob": -5.197463035583496,
+        "Greedy Search Decode": "aafte",
+        "Greedy Search Forward Log Prob": -5.197465896606445,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.5344691276550293
+    },
+    {
+        "Test Id": 238,
+        "Beam Search Decode": "srr",
+        "Beam Search Forward Log Prob": -4.248533725738525,
+        "Greedy Search Decode": "srr",
+        "Greedy Search Forward Log Prob": -4.248533725738525,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 1.9144651889801025
+    },
+    {
+        "Test Id": 239,
+        "Beam Search Decode": "morn",
+        "Beam Search Forward Log Prob": -5.51994514465332,
+        "Greedy Search Decode": "morn",
+        "Greedy Search Forward Log Prob": -5.5199456214904785,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 0.21340128779411316
+    },
+    {
+        "Test Id": 240,
+        "Beam Search Decode": "onoth",
+        "Beam Search Forward Log Prob": -4.044322490692139,
+        "Greedy Search Decode": "onoth",
+        "Greedy Search Forward Log Prob": -4.0443243980407715,
+        "Minimum Risk Decode": "another",
+        "Minimum Risk CTC Loss": 0.8764044046401978
+    },
+    {
+        "Test Id": 241,
+        "Beam Search Decode": "alo",
+        "Beam Search Forward Log Prob": -4.7256879806518555,
+        "Greedy Search Decode": "alo",
+        "Greedy Search Forward Log Prob": -4.725689888000488,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.45565155148506165
+    },
+    {
+        "Test Id": 242,
+        "Beam Search Decode": "eroe",
+        "Beam Search Forward Log Prob": -2.4623911380767822,
+        "Greedy Search Decode": "eroe",
+        "Greedy Search Forward Log Prob": -2.4623944759368896,
+        "Minimum Risk Decode": "become",
+        "Minimum Risk CTC Loss": 2.267287015914917
+    },
+    {
+        "Test Id": 243,
+        "Beam Search Decode": "oarter",
+        "Beam Search Forward Log Prob": -4.672425270080566,
+        "Greedy Search Decode": "oarter",
+        "Greedy Search Forward Log Prob": -4.672428131103516,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.435602605342865
+    },
+    {
+        "Test Id": 244,
+        "Beam Search Decode": "man",
+        "Beam Search Forward Log Prob": -4.412717342376709,
+        "Greedy Search Decode": "man",
+        "Greedy Search Forward Log Prob": -4.412718772888184,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 1.4784263372421265
+    },
+    {
+        "Test Id": 245,
+        "Beam Search Decode": "motrer",
+        "Beam Search Forward Log Prob": -5.7191596031188965,
+        "Greedy Search Decode": "motrer",
+        "Greedy Search Forward Log Prob": -5.719161033630371,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.7101243138313293
+    },
+    {
+        "Test Id": 246,
+        "Beam Search Decode": "ve",
+        "Beam Search Forward Log Prob": -5.057847023010254,
+        "Greedy Search Decode": "ve",
+        "Greedy Search Forward Log Prob": -5.057847499847412,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.7282068729400635
+    },
+    {
+        "Test Id": 247,
+        "Beam Search Decode": "aaa",
+        "Beam Search Forward Log Prob": -3.1976773738861084,
+        "Greedy Search Decode": "aaa",
+        "Greedy Search Forward Log Prob": -3.1976773738861084,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.42790335416793823
+    },
+    {
+        "Test Id": 248,
+        "Beam Search Decode": "ilo",
+        "Beam Search Forward Log Prob": -3.7746055126190186,
+        "Greedy Search Decode": "ilo",
+        "Greedy Search Forward Log Prob": -3.7746071815490723,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 2.412461996078491
+    },
+    {
+        "Test Id": 249,
+        "Beam Search Decode": "eden",
+        "Beam Search Forward Log Prob": -4.865049362182617,
+        "Greedy Search Decode": "eden",
+        "Greedy Search Forward Log Prob": -4.865047931671143,
+        "Minimum Risk Decode": "eating",
+        "Minimum Risk CTC Loss": 2.6744801998138428
+    },
+    {
+        "Test Id": 250,
+        "Beam Search Decode": "rothr",
+        "Beam Search Forward Log Prob": -4.734491348266602,
+        "Greedy Search Decode": "rothr",
+        "Greedy Search Forward Log Prob": -4.734491348266602,
+        "Minimum Risk Decode": "brother",
+        "Minimum Risk CTC Loss": 0.18653811514377594
+    },
+    {
+        "Test Id": 251,
+        "Beam Search Decode": "emte",
+        "Beam Search Forward Log Prob": -7.754457950592041,
+        "Greedy Search Decode": "emte",
+        "Greedy Search Forward Log Prob": -7.754459381103516,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 0.805535078048706
+    },
+    {
+        "Test Id": 252,
+        "Beam Search Decode": "crea",
+        "Beam Search Forward Log Prob": -6.105376720428467,
+        "Greedy Search Decode": "crea",
+        "Greedy Search Forward Log Prob": -6.105376243591309,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 0.620553195476532
+    },
+    {
+        "Test Id": 253,
+        "Beam Search Decode": "aenoo",
+        "Beam Search Forward Log Prob": -2.5902655124664307,
+        "Greedy Search Decode": "aenoo",
+        "Greedy Search Forward Log Prob": -2.5902674198150635,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 0.8880094289779663
+    },
+    {
+        "Test Id": 254,
+        "Beam Search Decode": "open",
+        "Beam Search Forward Log Prob": -2.5226707458496094,
+        "Greedy Search Decode": "open",
+        "Greedy Search Forward Log Prob": -2.5226728916168213,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 0.059396397322416306
+    },
+    {
+        "Test Id": 255,
+        "Beam Search Decode": "peopl",
+        "Beam Search Forward Log Prob": -4.922621726989746,
+        "Greedy Search Decode": "peopl",
+        "Greedy Search Forward Log Prob": -4.922623157501221,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 0.1750604510307312
+    },
+    {
+        "Test Id": 256,
+        "Beam Search Decode": "never",
+        "Beam Search Forward Log Prob": -2.9857399463653564,
+        "Greedy Search Decode": "never",
+        "Greedy Search Forward Log Prob": -2.9857430458068848,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.029987474903464317
+    },
+    {
+        "Test Id": 257,
+        "Beam Search Decode": "over",
+        "Beam Search Forward Log Prob": -3.872410535812378,
+        "Greedy Search Decode": "over",
+        "Greedy Search Forward Log Prob": -3.8724112510681152,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.16351783275604248
+    },
+    {
+        "Test Id": 258,
+        "Beam Search Decode": "t",
+        "Beam Search Forward Log Prob": -4.46256685256958,
+        "Greedy Search Decode": "t",
+        "Greedy Search Forward Log Prob": -4.462567329406738,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.8986781239509583
+    },
+    {
+        "Test Id": 259,
+        "Beam Search Decode": "joo",
+        "Beam Search Forward Log Prob": -3.840724229812622,
+        "Greedy Search Decode": "joo",
+        "Greedy Search Forward Log Prob": -3.840726137161255,
+        "Minimum Risk Decode": "enjoy",
+        "Minimum Risk CTC Loss": 0.9229241609573364
+    },
+    {
+        "Test Id": 260,
+        "Beam Search Decode": "ffeen",
+        "Beam Search Forward Log Prob": -3.804241180419922,
+        "Greedy Search Decode": "ffeen",
+        "Greedy Search Forward Log Prob": -3.8042426109313965,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.9811168313026428
+    },
+    {
+        "Test Id": 261,
+        "Beam Search Decode": "borer",
+        "Beam Search Forward Log Prob": -5.211069583892822,
+        "Greedy Search Decode": "borer",
+        "Greedy Search Forward Log Prob": -5.21107292175293,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 0.8182487487792969
+    },
+    {
+        "Test Id": 262,
+        "Beam Search Decode": "ol",
+        "Beam Search Forward Log Prob": -4.49590539932251,
+        "Greedy Search Decode": "ol",
+        "Greedy Search Forward Log Prob": -4.495903968811035,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.6231281757354736
+    },
+    {
+        "Test Id": 263,
+        "Beam Search Decode": "enoth",
+        "Beam Search Forward Log Prob": -4.8991265296936035,
+        "Greedy Search Decode": "enoth",
+        "Greedy Search Forward Log Prob": -4.899127006530762,
+        "Minimum Risk Decode": "nothing",
+        "Minimum Risk CTC Loss": 0.879225492477417
+    },
+    {
+        "Test Id": 264,
+        "Beam Search Decode": "shhldn",
+        "Beam Search Forward Log Prob": -7.042652606964111,
+        "Greedy Search Decode": "shhldn",
+        "Greedy Search Forward Log Prob": -7.042654514312744,
+        "Minimum Risk Decode": "children",
+        "Minimum Risk CTC Loss": 1.0723111629486084
+    },
+    {
+        "Test Id": 265,
+        "Beam Search Decode": "at",
+        "Beam Search Forward Log Prob": -2.178072929382324,
+        "Greedy Search Decode": "at",
+        "Greedy Search Forward Log Prob": -2.1780755519866943,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 1.5537256002426147
+    },
+    {
+        "Test Id": 266,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -2.719146728515625,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -2.719146251678467,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.11423040181398392
+    },
+    {
+        "Test Id": 267,
+        "Beam Search Decode": "als",
+        "Beam Search Forward Log Prob": -3.673823833465576,
+        "Greedy Search Decode": "als",
+        "Greedy Search Forward Log Prob": -3.6738243103027344,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 1.305470585823059
+    },
+    {
+        "Test Id": 268,
+        "Beam Search Decode": "oces",
+        "Beam Search Forward Log Prob": -4.020447731018066,
+        "Greedy Search Decode": "oces",
+        "Greedy Search Forward Log Prob": -4.020449161529541,
+        "Minimum Risk Decode": "forces",
+        "Minimum Risk CTC Loss": 0.6641668677330017
+    },
+    {
+        "Test Id": 269,
+        "Beam Search Decode": "rea",
+        "Beam Search Forward Log Prob": -5.652091026306152,
+        "Greedy Search Decode": "rea",
+        "Greedy Search Forward Log Prob": -5.652091979980469,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 0.20734067261219025
+    },
+    {
+        "Test Id": 270,
+        "Beam Search Decode": "evernt",
+        "Beam Search Forward Log Prob": -5.3553242683410645,
+        "Greedy Search Decode": "evernt",
+        "Greedy Search Forward Log Prob": -5.355323314666748,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 1.2220717668533325
+    },
+    {
+        "Test Id": 271,
+        "Beam Search Decode": "tver",
+        "Beam Search Forward Log Prob": -5.205265045166016,
+        "Greedy Search Decode": "tver",
+        "Greedy Search Forward Log Prob": -5.205266952514648,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.36916449666023254
+    },
+    {
+        "Test Id": 272,
+        "Beam Search Decode": "nevrr",
+        "Beam Search Forward Log Prob": -3.3863744735717773,
+        "Greedy Search Decode": "nevrr",
+        "Greedy Search Forward Log Prob": -3.3863749504089355,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.16053667664527893
+    },
+    {
+        "Test Id": 273,
+        "Beam Search Decode": "lso",
+        "Beam Search Forward Log Prob": -3.359816074371338,
+        "Greedy Search Decode": "lso",
+        "Greedy Search Forward Log Prob": -3.35981822013855,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.12239246815443039
+    },
+    {
+        "Test Id": 274,
+        "Beam Search Decode": "pomen",
+        "Beam Search Forward Log Prob": -6.45832633972168,
+        "Greedy Search Decode": "pomen",
+        "Greedy Search Forward Log Prob": -6.458326816558838,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 1.4246388673782349
+    },
+    {
+        "Test Id": 275,
+        "Beam Search Decode": "on",
+        "Beam Search Forward Log Prob": -2.602531671524048,
+        "Greedy Search Decode": "on",
+        "Greedy Search Forward Log Prob": -2.6025326251983643,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.5089374780654907
+    },
+    {
+        "Test Id": 276,
+        "Beam Search Decode": "proutr",
+        "Beam Search Forward Log Prob": -3.7941701412200928,
+        "Greedy Search Decode": "proutr",
+        "Greedy Search Forward Log Prob": -3.7941720485687256,
+        "Minimum Risk Decode": "brother",
+        "Minimum Risk CTC Loss": 1.0610111951828003
+    },
+    {
+        "Test Id": 277,
+        "Beam Search Decode": "abo",
+        "Beam Search Forward Log Prob": -3.1825459003448486,
+        "Greedy Search Decode": "abo",
+        "Greedy Search Forward Log Prob": -3.182548999786377,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.3699342608451843
+    },
+    {
+        "Test Id": 278,
+        "Beam Search Decode": "vman",
+        "Beam Search Forward Log Prob": -5.565618515014648,
+        "Greedy Search Decode": "vman",
+        "Greedy Search Forward Log Prob": -5.565619945526123,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.6382607221603394
+    },
+    {
+        "Test Id": 279,
+        "Beam Search Decode": "nthinte",
+        "Beam Search Forward Log Prob": -9.480650901794434,
+        "Greedy Search Decode": "nthinte",
+        "Greedy Search Forward Log Prob": -9.48065185546875,
+        "Minimum Risk Decode": "dinner",
+        "Minimum Risk CTC Loss": 1.1023998260498047
+    },
+    {
+        "Test Id": 280,
+        "Beam Search Decode": "so",
+        "Beam Search Forward Log Prob": -3.279893636703491,
+        "Greedy Search Decode": "so",
+        "Greedy Search Forward Log Prob": -3.2798964977264404,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 1.622308373451233
+    },
+    {
+        "Test Id": 281,
+        "Beam Search Decode": "ala",
+        "Beam Search Forward Log Prob": -6.336551189422607,
+        "Greedy Search Decode": "ala",
+        "Greedy Search Forward Log Prob": -6.336551666259766,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.5146172642707825
+    },
+    {
+        "Test Id": 282,
+        "Beam Search Decode": "peoe",
+        "Beam Search Forward Log Prob": -2.61732816696167,
+        "Greedy Search Decode": "peoe",
+        "Greedy Search Forward Log Prob": -2.61732816696167,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 0.6460197567939758
+    },
+    {
+        "Test Id": 283,
+        "Beam Search Decode": "sd",
+        "Beam Search Forward Log Prob": -6.8244218826293945,
+        "Greedy Search Decode": "sd",
+        "Greedy Search Forward Log Prob": -6.824423789978027,
+        "Minimum Risk Decode": "study",
+        "Minimum Risk CTC Loss": 0.27927377820014954
+    },
+    {
+        "Test Id": 284,
+        "Beam Search Decode": "er",
+        "Beam Search Forward Log Prob": -4.59438943862915,
+        "Greedy Search Decode": "er",
+        "Greedy Search Forward Log Prob": -4.594389915466309,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.5878210663795471
+    },
+    {
+        "Test Id": 285,
+        "Beam Search Decode": "abo",
+        "Beam Search Forward Log Prob": -2.448726177215576,
+        "Greedy Search Decode": "abo",
+        "Greedy Search Forward Log Prob": -2.448725461959839,
+        "Minimum Risk Decode": "about",
+        "Minimum Risk CTC Loss": 0.4239288568496704
+    },
+    {
+        "Test Id": 286,
+        "Beam Search Decode": "affte",
+        "Beam Search Forward Log Prob": -5.251792907714844,
+        "Greedy Search Decode": "affte",
+        "Greedy Search Forward Log Prob": -5.251795768737793,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.18398815393447876
+    },
+    {
+        "Test Id": 287,
+        "Beam Search Decode": "o",
+        "Beam Search Forward Log Prob": -2.4630610942840576,
+        "Greedy Search Decode": "o",
+        "Greedy Search Forward Log Prob": -2.4630608558654785,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 1.2454332113265991
+    },
+    {
+        "Test Id": 288,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -2.4792511463165283,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -2.479250907897949,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.11060051620006561
+    },
+    {
+        "Test Id": 289,
+        "Beam Search Decode": "chidrr",
+        "Beam Search Forward Log Prob": -4.938438415527344,
+        "Greedy Search Decode": "chidrr",
+        "Greedy Search Forward Log Prob": -4.938441753387451,
+        "Minimum Risk Decode": "children",
+        "Minimum Risk CTC Loss": 1.095661997795105
+    },
+    {
+        "Test Id": 290,
+        "Beam Search Decode": "efthe",
+        "Beam Search Forward Log Prob": -4.676818370819092,
+        "Greedy Search Decode": "efthe",
+        "Greedy Search Forward Log Prob": -4.67681884765625,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 1.4015698432922363
+    },
+    {
+        "Test Id": 291,
+        "Beam Search Decode": "eerr",
+        "Beam Search Forward Log Prob": -3.2077386379241943,
+        "Greedy Search Decode": "eerr",
+        "Greedy Search Forward Log Prob": -3.2077386379241943,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.6177942752838135
+    },
+    {
+        "Test Id": 292,
+        "Beam Search Decode": "tten",
+        "Beam Search Forward Log Prob": -4.055758476257324,
+        "Greedy Search Decode": "tten",
+        "Greedy Search Forward Log Prob": -4.055759906768799,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.5905195474624634
+    },
+    {
+        "Test Id": 293,
+        "Beam Search Decode": "inou",
+        "Beam Search Forward Log Prob": -5.169443130493164,
+        "Greedy Search Decode": "inou",
+        "Greedy Search Forward Log Prob": -5.16944694519043,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 1.0346908569335938
+    },
+    {
+        "Test Id": 294,
+        "Beam Search Decode": "rer",
+        "Beam Search Forward Log Prob": -3.496537208557129,
+        "Greedy Search Decode": "rer",
+        "Greedy Search Forward Log Prob": -3.4965391159057617,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 0.986531138420105
+    },
+    {
+        "Test Id": 295,
+        "Beam Search Decode": "on",
+        "Beam Search Forward Log Prob": -3.162545680999756,
+        "Greedy Search Decode": "on",
+        "Greedy Search Forward Log Prob": -3.1625475883483887,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 1.1148757934570312
+    },
+    {
+        "Test Id": 296,
+        "Beam Search Decode": "arer",
+        "Beam Search Forward Log Prob": -1.2976491451263428,
+        "Greedy Search Decode": "arer",
+        "Greedy Search Forward Log Prob": -1.2976491451263428,
+        "Minimum Risk Decode": "order",
+        "Minimum Risk CTC Loss": 1.1579928398132324
+    },
+    {
+        "Test Id": 297,
+        "Beam Search Decode": "ever",
+        "Beam Search Forward Log Prob": -3.1535987854003906,
+        "Greedy Search Decode": "ever",
+        "Greedy Search Forward Log Prob": -3.1535983085632324,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 1.187746524810791
+    },
+    {
+        "Test Id": 298,
+        "Beam Search Decode": "chhldrn",
+        "Beam Search Forward Log Prob": -8.212221145629883,
+        "Greedy Search Decode": "chhldrn",
+        "Greedy Search Forward Log Prob": -8.21221923828125,
+        "Minimum Risk Decode": "children",
+        "Minimum Risk CTC Loss": 0.5402661561965942
+    },
+    {
+        "Test Id": 299,
+        "Beam Search Decode": "er",
+        "Beam Search Forward Log Prob": -2.8480186462402344,
+        "Greedy Search Decode": "er",
+        "Greedy Search Forward Log Prob": -2.8480193614959717,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.5023883581161499
+    },
+    {
+        "Test Id": 300,
+        "Beam Search Decode": "il",
+        "Beam Search Forward Log Prob": -4.548752307891846,
+        "Greedy Search Decode": "il",
+        "Greedy Search Forward Log Prob": -4.548752784729004,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.45880499482154846
+    },
+    {
+        "Test Id": 301,
+        "Beam Search Decode": "nj",
+        "Beam Search Forward Log Prob": -3.63568377494812,
+        "Greedy Search Decode": "nj",
+        "Greedy Search Forward Log Prob": -3.6356849670410156,
+        "Minimum Risk Decode": "enjoy",
+        "Minimum Risk CTC Loss": 0.33487412333488464
+    },
+    {
+        "Test Id": 302,
+        "Beam Search Decode": "a",
+        "Beam Search Forward Log Prob": -2.5433144569396973,
+        "Greedy Search Decode": "a",
+        "Greedy Search Forward Log Prob": -2.5433149337768555,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 1.2519783973693848
+    },
+    {
+        "Test Id": 303,
+        "Beam Search Decode": "ifor",
+        "Beam Search Forward Log Prob": -4.034717559814453,
+        "Greedy Search Decode": "ifor",
+        "Greedy Search Forward Log Prob": -4.0347185134887695,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.7759601473808289
+    },
+    {
+        "Test Id": 304,
+        "Beam Search Decode": "mornin",
+        "Beam Search Forward Log Prob": -5.142126083374023,
+        "Greedy Search Decode": "mornin",
+        "Greedy Search Forward Log Prob": -5.1421284675598145,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 0.11807861179113388
+    },
+    {
+        "Test Id": 305,
+        "Beam Search Decode": "opn",
+        "Beam Search Forward Log Prob": -3.1170589923858643,
+        "Greedy Search Decode": "opn",
+        "Greedy Search Forward Log Prob": -3.117060422897339,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 0.39217865467071533
+    },
+    {
+        "Test Id": 306,
+        "Beam Search Decode": "l",
+        "Beam Search Forward Log Prob": -4.448537349700928,
+        "Greedy Search Decode": "l",
+        "Greedy Search Forward Log Prob": -4.448538303375244,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.5227362513542175
+    },
+    {
+        "Test Id": 307,
+        "Beam Search Decode": "ater",
+        "Beam Search Forward Log Prob": -4.553407669067383,
+        "Greedy Search Decode": "ater",
+        "Greedy Search Forward Log Prob": -4.553409099578857,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.21207687258720398
+    },
+    {
+        "Test Id": 308,
+        "Beam Search Decode": "tab",
+        "Beam Search Forward Log Prob": -1.9264566898345947,
+        "Greedy Search Decode": "tab",
+        "Greedy Search Forward Log Prob": -1.926456093788147,
+        "Minimum Risk Decode": "table",
+        "Minimum Risk CTC Loss": 0.664734959602356
+    },
+    {
+        "Test Id": 309,
+        "Beam Search Decode": "ovr",
+        "Beam Search Forward Log Prob": -1.6961774826049805,
+        "Greedy Search Decode": "ovr",
+        "Greedy Search Forward Log Prob": -1.6961774826049805,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.14848870038986206
+    },
+    {
+        "Test Id": 310,
+        "Beam Search Decode": "aln",
+        "Beam Search Forward Log Prob": -2.3872787952423096,
+        "Greedy Search Decode": "aln",
+        "Greedy Search Forward Log Prob": -2.387279748916626,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 0.28940248489379883
+    },
+    {
+        "Test Id": 311,
+        "Beam Search Decode": "on",
+        "Beam Search Forward Log Prob": -3.9001457691192627,
+        "Greedy Search Decode": "on",
+        "Greedy Search Forward Log Prob": -3.900146245956421,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.99845290184021
+    },
+    {
+        "Test Id": 312,
+        "Beam Search Decode": "mm",
+        "Beam Search Forward Log Prob": -2.9468541145324707,
+        "Greedy Search Decode": "mm",
+        "Greedy Search Forward Log Prob": -2.946855306625366,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 1.2857097387313843
+    },
+    {
+        "Test Id": 313,
+        "Beam Search Decode": "ol",
+        "Beam Search Forward Log Prob": -2.751124143600464,
+        "Greedy Search Decode": "ol",
+        "Greedy Search Forward Log Prob": -2.7511236667633057,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.2298753708600998
+    },
+    {
+        "Test Id": 314,
+        "Beam Search Decode": "nmer",
+        "Beam Search Forward Log Prob": -5.6518683433532715,
+        "Greedy Search Decode": "nmer",
+        "Greedy Search Forward Log Prob": -5.651869773864746,
+        "Minimum Risk Decode": "dinner",
+        "Minimum Risk CTC Loss": 1.2027595043182373
+    },
+    {
+        "Test Id": 315,
+        "Beam Search Decode": "ino",
+        "Beam Search Forward Log Prob": -4.626389503479004,
+        "Greedy Search Decode": "ino",
+        "Greedy Search Forward Log Prob": -4.626389503479004,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.8615368008613586
+    },
+    {
+        "Test Id": 316,
+        "Beam Search Decode": "people",
+        "Beam Search Forward Log Prob": -4.298823833465576,
+        "Greedy Search Decode": "people",
+        "Greedy Search Forward Log Prob": -4.298827171325684,
+        "Minimum Risk Decode": "people",
+        "Minimum Risk CTC Loss": 0.08481300622224808
+    },
+    {
+        "Test Id": 317,
+        "Beam Search Decode": "oer",
+        "Beam Search Forward Log Prob": -1.797620415687561,
+        "Greedy Search Decode": "oer",
+        "Greedy Search Forward Log Prob": -1.7976207733154297,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 1.080230712890625
+    },
+    {
+        "Test Id": 318,
+        "Beam Search Decode": "enou",
+        "Beam Search Forward Log Prob": -6.147360801696777,
+        "Greedy Search Decode": "enou",
+        "Greedy Search Forward Log Prob": -6.147359848022461,
+        "Minimum Risk Decode": "enough",
+        "Minimum Risk CTC Loss": 0.23961381614208221
+    },
+    {
+        "Test Id": 319,
+        "Beam Search Decode": "bl",
+        "Beam Search Forward Log Prob": -3.145198345184326,
+        "Greedy Search Decode": "bl",
+        "Greedy Search Forward Log Prob": -3.145198106765747,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 2.3970537185668945
+    },
+    {
+        "Test Id": 320,
+        "Beam Search Decode": "rr",
+        "Beam Search Forward Log Prob": -4.9071855545043945,
+        "Greedy Search Decode": "rr",
+        "Greedy Search Forward Log Prob": -4.907186985015869,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.5261149406433105
+    },
+    {
+        "Test Id": 321,
+        "Beam Search Decode": "mnin",
+        "Beam Search Forward Log Prob": -4.5243730545043945,
+        "Greedy Search Decode": "mnin",
+        "Greedy Search Forward Log Prob": -4.5243754386901855,
+        "Minimum Risk Decode": "morning",
+        "Minimum Risk CTC Loss": 1.3119686841964722
+    },
+    {
+        "Test Id": 322,
+        "Beam Search Decode": "lwa",
+        "Beam Search Forward Log Prob": -3.8671317100524902,
+        "Greedy Search Decode": "lwa",
+        "Greedy Search Forward Log Prob": -3.867130994796753,
+        "Minimum Risk Decode": "always",
+        "Minimum Risk CTC Loss": 0.6249303221702576
+    },
+    {
+        "Test Id": 323,
+        "Beam Search Decode": "ctr",
+        "Beam Search Forward Log Prob": -2.4526400566101074,
+        "Greedy Search Decode": "ctr",
+        "Greedy Search Forward Log Prob": -2.452641725540161,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 1.4501221179962158
+    },
+    {
+        "Test Id": 324,
+        "Beam Search Decode": "rve",
+        "Beam Search Forward Log Prob": -3.721174955368042,
+        "Greedy Search Decode": "rve",
+        "Greedy Search Forward Log Prob": -3.7211756706237793,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 1.6286708116531372
+    },
+    {
+        "Test Id": 325,
+        "Beam Search Decode": "a",
+        "Beam Search Forward Log Prob": -2.258223056793213,
+        "Greedy Search Decode": "a",
+        "Greedy Search Forward Log Prob": -2.2582249641418457,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.9940299391746521
+    },
+    {
+        "Test Id": 326,
+        "Beam Search Decode": "not",
+        "Beam Search Forward Log Prob": -3.133847236633301,
+        "Greedy Search Decode": "not",
+        "Greedy Search Forward Log Prob": -3.133849620819092,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 1.3746923208236694
+    },
+    {
+        "Test Id": 327,
+        "Beam Search Decode": "ter",
+        "Beam Search Forward Log Prob": -2.385220766067505,
+        "Greedy Search Decode": "ter",
+        "Greedy Search Forward Log Prob": -2.385220766067505,
+        "Minimum Risk Decode": "water",
+        "Minimum Risk CTC Loss": 0.4535481333732605
+    },
+    {
+        "Test Id": 328,
+        "Beam Search Decode": "car",
+        "Beam Search Forward Log Prob": -4.355366230010986,
+        "Greedy Search Decode": "car",
+        "Greedy Search Forward Log Prob": -4.3553667068481445,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 0.24179556965827942
+    },
+    {
+        "Test Id": 329,
+        "Beam Search Decode": "notin",
+        "Beam Search Forward Log Prob": -8.773327827453613,
+        "Greedy Search Decode": "notin",
+        "Greedy Search Forward Log Prob": -8.773326873779297,
+        "Minimum Risk Decode": "nothing",
+        "Minimum Risk CTC Loss": 0.21828028559684753
+    },
+    {
+        "Test Id": 330,
+        "Beam Search Decode": "efoer",
+        "Beam Search Forward Log Prob": -4.4960713386535645,
+        "Greedy Search Decode": "efoer",
+        "Greedy Search Forward Log Prob": -4.496074676513672,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.5427075028419495
+    },
+    {
+        "Test Id": 331,
+        "Beam Search Decode": "over",
+        "Beam Search Forward Log Prob": -4.354068279266357,
+        "Greedy Search Decode": "over",
+        "Greedy Search Forward Log Prob": -4.354071140289307,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.16218607127666473
+    },
+    {
+        "Test Id": 332,
+        "Beam Search Decode": "lo",
+        "Beam Search Forward Log Prob": -4.718671798706055,
+        "Greedy Search Decode": "lo",
+        "Greedy Search Forward Log Prob": -4.718672275543213,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.19762849807739258
+    },
+    {
+        "Test Id": 333,
+        "Beam Search Decode": "",
+        "Beam Search Forward Log Prob": -0.586830198764801,
+        "Greedy Search Decode": "",
+        "Greedy Search Forward Log Prob": -0.5868300199508667,
+        "Minimum Risk Decode": "along",
+        "Minimum Risk CTC Loss": 1.2864652872085571
+    },
+    {
+        "Test Id": 334,
+        "Beam Search Decode": "op",
+        "Beam Search Forward Log Prob": -2.1116933822631836,
+        "Greedy Search Decode": "op",
+        "Greedy Search Forward Log Prob": -2.1116929054260254,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 0.5322496294975281
+    },
+    {
+        "Test Id": 335,
+        "Beam Search Decode": "efo",
+        "Beam Search Forward Log Prob": -3.265388011932373,
+        "Greedy Search Decode": "efo",
+        "Greedy Search Forward Log Prob": -3.2653884887695312,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 1.1795119047164917
+    },
+    {
+        "Test Id": 336,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -2.060034990310669,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -2.06003475189209,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.12124507874250412
+    },
+    {
+        "Test Id": 337,
+        "Beam Search Decode": "wito",
+        "Beam Search Forward Log Prob": -4.420015335083008,
+        "Greedy Search Decode": "wito",
+        "Greedy Search Forward Log Prob": -4.420015811920166,
+        "Minimum Risk Decode": "without",
+        "Minimum Risk CTC Loss": 0.4167848527431488
+    },
+    {
+        "Test Id": 338,
+        "Beam Search Decode": "afte",
+        "Beam Search Forward Log Prob": -3.5341482162475586,
+        "Greedy Search Decode": "afte",
+        "Greedy Search Forward Log Prob": -3.534151077270508,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.7544111013412476
+    },
+    {
+        "Test Id": 339,
+        "Beam Search Decode": "ola",
+        "Beam Search Forward Log Prob": -4.49937629699707,
+        "Greedy Search Decode": "ola",
+        "Greedy Search Forward Log Prob": -4.499377727508545,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.7369245886802673
+    },
+    {
+        "Test Id": 340,
+        "Beam Search Decode": "orce",
+        "Beam Search Forward Log Prob": -4.686882019042969,
+        "Greedy Search Decode": "orce",
+        "Greedy Search Forward Log Prob": -4.686882019042969,
+        "Minimum Risk Decode": "forces",
+        "Minimum Risk CTC Loss": 0.8420705795288086
+    },
+    {
+        "Test Id": 341,
+        "Beam Search Decode": "pt",
+        "Beam Search Forward Log Prob": -2.8673253059387207,
+        "Greedy Search Decode": "pt",
+        "Greedy Search Forward Log Prob": -2.867325782775879,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 1.8549461364746094
+    },
+    {
+        "Test Id": 342,
+        "Beam Search Decode": "vr",
+        "Beam Search Forward Log Prob": -4.297787189483643,
+        "Greedy Search Decode": "vr",
+        "Greedy Search Forward Log Prob": -4.297786712646484,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.6644240617752075
+    },
+    {
+        "Test Id": 343,
+        "Beam Search Decode": "alo",
+        "Beam Search Forward Log Prob": -3.432825803756714,
+        "Greedy Search Decode": "alo",
+        "Greedy Search Forward Log Prob": -3.432827949523926,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.23779000341892242
+    },
+    {
+        "Test Id": 344,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -1.4131929874420166,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -1.4131927490234375,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.46842053532600403
+    },
+    {
+        "Test Id": 345,
+        "Beam Search Decode": "ab",
+        "Beam Search Forward Log Prob": -2.059434413909912,
+        "Greedy Search Decode": "ab",
+        "Greedy Search Forward Log Prob": -2.059434652328491,
+        "Minimum Risk Decode": "table",
+        "Minimum Risk CTC Loss": 0.7394604086875916
+    },
+    {
+        "Test Id": 346,
+        "Beam Search Decode": "n",
+        "Beam Search Forward Log Prob": -2.1843888759613037,
+        "Greedy Search Decode": "n",
+        "Greedy Search Forward Log Prob": -2.1843883991241455,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 1.0178996324539185
+    },
+    {
+        "Test Id": 347,
+        "Beam Search Decode": "hrrr",
+        "Beam Search Forward Log Prob": -7.663509845733643,
+        "Greedy Search Decode": "hrrr",
+        "Greedy Search Forward Log Prob": -7.663510322570801,
+        "Minimum Risk Decode": "every",
+        "Minimum Risk CTC Loss": 0.9644948244094849
+    },
+    {
+        "Test Id": 348,
+        "Beam Search Decode": "al",
+        "Beam Search Forward Log Prob": -8.947290420532227,
+        "Greedy Search Decode": "al",
+        "Greedy Search Forward Log Prob": -8.947293281555176,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 1.0468212366104126
+    },
+    {
+        "Test Id": 349,
+        "Beam Search Decode": "ft",
+        "Beam Search Forward Log Prob": -4.020391464233398,
+        "Greedy Search Decode": "ft",
+        "Greedy Search Forward Log Prob": -4.020392417907715,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.9791042804718018
+    },
+    {
+        "Test Id": 350,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -4.897269248962402,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -4.897270202636719,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.15541315078735352
+    },
+    {
+        "Test Id": 351,
+        "Beam Search Decode": "forcee",
+        "Beam Search Forward Log Prob": -5.466132164001465,
+        "Greedy Search Decode": "forcee",
+        "Greedy Search Forward Log Prob": -5.466132640838623,
+        "Minimum Risk Decode": "forces",
+        "Minimum Risk CTC Loss": 0.35512951016426086
+    },
+    {
+        "Test Id": 352,
+        "Beam Search Decode": "after",
+        "Beam Search Forward Log Prob": -4.540504455566406,
+        "Greedy Search Decode": "after",
+        "Greedy Search Forward Log Prob": -4.54050350189209,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.08034946024417877
+    },
+    {
+        "Test Id": 353,
+        "Beam Search Decode": "l",
+        "Beam Search Forward Log Prob": -2.3499293327331543,
+        "Greedy Search Decode": "l",
+        "Greedy Search Forward Log Prob": -2.3499298095703125,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.6094295978546143
+    },
+    {
+        "Test Id": 354,
+        "Beam Search Decode": "even",
+        "Beam Search Forward Log Prob": -2.500708818435669,
+        "Greedy Search Decode": "even",
+        "Greedy Search Forward Log Prob": -2.5007107257843018,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 0.01805206574499607
+    },
+    {
+        "Test Id": 355,
+        "Beam Search Decode": "w",
+        "Beam Search Forward Log Prob": -1.8918592929840088,
+        "Greedy Search Decode": "w",
+        "Greedy Search Forward Log Prob": -1.8918592929840088,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 1.1918346881866455
+    },
+    {
+        "Test Id": 356,
+        "Beam Search Decode": "awa",
+        "Beam Search Forward Log Prob": -4.689426898956299,
+        "Greedy Search Decode": "awa",
+        "Greedy Search Forward Log Prob": -4.689424991607666,
+        "Minimum Risk Decode": "away",
+        "Minimum Risk CTC Loss": 0.1698072850704193
+    },
+    {
+        "Test Id": 357,
+        "Beam Search Decode": "stttt",
+        "Beam Search Forward Log Prob": -4.092244625091553,
+        "Greedy Search Decode": "stttt",
+        "Greedy Search Forward Log Prob": -4.092245101928711,
+        "Minimum Risk Decode": "study",
+        "Minimum Risk CTC Loss": 0.7467839121818542
+    },
+    {
+        "Test Id": 358,
+        "Beam Search Decode": "tem",
+        "Beam Search Forward Log Prob": -4.983737468719482,
+        "Greedy Search Decode": "tem",
+        "Greedy Search Forward Log Prob": -4.983739376068115,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 0.31506505608558655
+    },
+    {
+        "Test Id": 359,
+        "Beam Search Decode": "chehlldre",
+        "Beam Search Forward Log Prob": -8.99955940246582,
+        "Greedy Search Decode": "chehlldre",
+        "Greedy Search Forward Log Prob": -8.999561309814453,
+        "Minimum Risk Decode": "children",
+        "Minimum Risk CTC Loss": 1.0233196020126343
+    },
+    {
+        "Test Id": 360,
+        "Beam Search Decode": "ve",
+        "Beam Search Forward Log Prob": -2.9167466163635254,
+        "Greedy Search Decode": "ve",
+        "Greedy Search Forward Log Prob": -2.9167497158050537,
+        "Minimum Risk Decode": "over",
+        "Minimum Risk CTC Loss": 0.4458898603916168
+    },
+    {
+        "Test Id": 361,
+        "Beam Search Decode": "crr",
+        "Beam Search Forward Log Prob": -3.407536745071411,
+        "Greedy Search Decode": "crr",
+        "Greedy Search Forward Log Prob": -3.407536745071411,
+        "Minimum Risk Decode": "carry",
+        "Minimum Risk CTC Loss": 1.5142204761505127
+    },
+    {
+        "Test Id": 362,
+        "Beam Search Decode": "mon",
+        "Beam Search Forward Log Prob": -3.2549452781677246,
+        "Greedy Search Decode": "mon",
+        "Greedy Search Forward Log Prob": -3.25494647026062,
+        "Minimum Risk Decode": "money",
+        "Minimum Risk CTC Loss": 0.28420522809028625
+    },
+    {
+        "Test Id": 363,
+        "Beam Search Decode": "l",
+        "Beam Search Forward Log Prob": -3.8321094512939453,
+        "Greedy Search Decode": "l",
+        "Greedy Search Forward Log Prob": -3.8321099281311035,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.5430834293365479
+    },
+    {
+        "Test Id": 364,
+        "Beam Search Decode": "ev",
+        "Beam Search Forward Log Prob": -2.3570919036865234,
+        "Greedy Search Decode": "ev",
+        "Greedy Search Forward Log Prob": -2.357093095779419,
+        "Minimum Risk Decode": "even",
+        "Minimum Risk CTC Loss": 1.4414747953414917
+    },
+    {
+        "Test Id": 365,
+        "Beam Search Decode": "nl",
+        "Beam Search Forward Log Prob": -3.2997796535491943,
+        "Greedy Search Decode": "nl",
+        "Greedy Search Forward Log Prob": -3.2997801303863525,
+        "Minimum Risk Decode": "only",
+        "Minimum Risk CTC Loss": 0.4442036747932434
+    },
+    {
+        "Test Id": 366,
+        "Beam Search Decode": "tin",
+        "Beam Search Forward Log Prob": -6.347019672393799,
+        "Greedy Search Decode": "tin",
+        "Greedy Search Forward Log Prob": -6.347018718719482,
+        "Minimum Risk Decode": "often",
+        "Minimum Risk CTC Loss": 0.8206529021263123
+    },
+    {
+        "Test Id": 367,
+        "Beam Search Decode": "man",
+        "Beam Search Forward Log Prob": -4.459575653076172,
+        "Greedy Search Decode": "man",
+        "Greedy Search Forward Log Prob": -4.459576606750488,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.16453510522842407
+    },
+    {
+        "Test Id": 368,
+        "Beam Search Decode": "also",
+        "Beam Search Forward Log Prob": -2.5491137504577637,
+        "Greedy Search Decode": "also",
+        "Greedy Search Forward Log Prob": -2.549116611480713,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.030709283426404
+    },
+    {
+        "Test Id": 369,
+        "Beam Search Decode": "lo",
+        "Beam Search Forward Log Prob": -4.359373569488525,
+        "Greedy Search Decode": "lo",
+        "Greedy Search Forward Log Prob": -4.359374523162842,
+        "Minimum Risk Decode": "allow",
+        "Minimum Risk CTC Loss": 0.44146135449409485
+    },
+    {
+        "Test Id": 370,
+        "Beam Search Decode": "cdvn",
+        "Beam Search Forward Log Prob": -4.7099738121032715,
+        "Greedy Search Decode": "cdvn",
+        "Greedy Search Forward Log Prob": -4.709975242614746,
+        "Minimum Risk Decode": "children",
+        "Minimum Risk CTC Loss": 1.0205878019332886
+    },
+    {
+        "Test Id": 371,
+        "Beam Search Decode": "als",
+        "Beam Search Forward Log Prob": -3.4049508571624756,
+        "Greedy Search Decode": "als",
+        "Greedy Search Forward Log Prob": -3.4049549102783203,
+        "Minimum Risk Decode": "also",
+        "Minimum Risk CTC Loss": 0.12381741404533386
+    },
+    {
+        "Test Id": 372,
+        "Beam Search Decode": "al",
+        "Beam Search Forward Log Prob": -2.900752544403076,
+        "Greedy Search Decode": "al",
+        "Greedy Search Forward Log Prob": -2.9007527828216553,
+        "Minimum Risk Decode": "oily",
+        "Minimum Risk CTC Loss": 0.7930704355239868
+    },
+    {
+        "Test Id": 373,
+        "Beam Search Decode": "ant",
+        "Beam Search Forward Log Prob": -2.115924596786499,
+        "Greedy Search Decode": "ant",
+        "Greedy Search Forward Log Prob": -2.1159253120422363,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 2.0684943199157715
+    },
+    {
+        "Test Id": 374,
+        "Beam Search Decode": "ver",
+        "Beam Search Forward Log Prob": -3.5981221199035645,
+        "Greedy Search Decode": "ver",
+        "Greedy Search Forward Log Prob": -3.5981225967407227,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.10668367892503738
+    },
+    {
+        "Test Id": 375,
+        "Beam Search Decode": "wthou",
+        "Beam Search Forward Log Prob": -3.2980735301971436,
+        "Greedy Search Decode": "wthou",
+        "Greedy Search Forward Log Prob": -3.298074722290039,
+        "Minimum Risk Decode": "without",
+        "Minimum Risk CTC Loss": 1.5427104234695435
+    },
+    {
+        "Test Id": 376,
+        "Beam Search Decode": "man",
+        "Beam Search Forward Log Prob": -2.9785404205322266,
+        "Greedy Search Decode": "man",
+        "Greedy Search Forward Log Prob": -2.9785406589508057,
+        "Minimum Risk Decode": "many",
+        "Minimum Risk CTC Loss": 0.15079163014888763
+    },
+    {
+        "Test Id": 377,
+        "Beam Search Decode": "ope",
+        "Beam Search Forward Log Prob": -2.266537666320801,
+        "Greedy Search Decode": "ope",
+        "Greedy Search Forward Log Prob": -2.266538143157959,
+        "Minimum Risk Decode": "open",
+        "Minimum Risk CTC Loss": 0.7564730048179626
+    },
+    {
+        "Test Id": 378,
+        "Beam Search Decode": "eatin",
+        "Beam Search Forward Log Prob": -6.210400104522705,
+        "Greedy Search Decode": "eatin",
+        "Greedy Search Forward Log Prob": -6.210400104522705,
+        "Minimum Risk Decode": "eating",
+        "Minimum Risk CTC Loss": 0.9244556427001953
+    },
+    {
+        "Test Id": 379,
+        "Beam Search Decode": "iint",
+        "Beam Search Forward Log Prob": -1.6445796489715576,
+        "Greedy Search Decode": "iint",
+        "Greedy Search Forward Log Prob": -1.6445796489715576,
+        "Minimum Risk Decode": "into",
+        "Minimum Risk CTC Loss": 0.6434230804443359
+    },
+    {
+        "Test Id": 380,
+        "Beam Search Decode": "nver",
+        "Beam Search Forward Log Prob": -3.5826778411865234,
+        "Greedy Search Decode": "nver",
+        "Greedy Search Forward Log Prob": -3.5826785564422607,
+        "Minimum Risk Decode": "never",
+        "Minimum Risk CTC Loss": 0.23638176918029785
+    },
+    {
+        "Test Id": 381,
+        "Beam Search Decode": "bather",
+        "Beam Search Forward Log Prob": -7.295483112335205,
+        "Greedy Search Decode": "bather",
+        "Greedy Search Forward Log Prob": -7.295483589172363,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.850382387638092
+    },
+    {
+        "Test Id": 382,
+        "Beam Search Decode": "oe",
+        "Beam Search Forward Log Prob": -4.656824111938477,
+        "Greedy Search Decode": "oe",
+        "Greedy Search Forward Log Prob": -4.656825542449951,
+        "Minimum Risk Decode": "become",
+        "Minimum Risk CTC Loss": 1.7762318849563599
+    },
+    {
+        "Test Id": 383,
+        "Beam Search Decode": "r",
+        "Beam Search Forward Log Prob": -1.9238661527633667,
+        "Greedy Search Decode": "r",
+        "Greedy Search Forward Log Prob": -1.9238663911819458,
+        "Minimum Risk Decode": "very",
+        "Minimum Risk CTC Loss": 0.9317266345024109
+    },
+    {
+        "Test Id": 384,
+        "Beam Search Decode": "ste",
+        "Beam Search Forward Log Prob": -5.8093695640563965,
+        "Greedy Search Decode": "ste",
+        "Greedy Search Forward Log Prob": -5.8093719482421875,
+        "Minimum Risk Decode": "system",
+        "Minimum Risk CTC Loss": 0.38908326625823975
+    },
+    {
+        "Test Id": 385,
+        "Beam Search Decode": "njoo",
+        "Beam Search Forward Log Prob": -2.9442005157470703,
+        "Greedy Search Decode": "njoo",
+        "Greedy Search Forward Log Prob": -2.944202423095703,
+        "Minimum Risk Decode": "enjoy",
+        "Minimum Risk CTC Loss": 0.9510841369628906
+    },
+    {
+        "Test Id": 386,
+        "Beam Search Decode": "te",
+        "Beam Search Forward Log Prob": -2.1077730655670166,
+        "Greedy Search Decode": "te",
+        "Greedy Search Forward Log Prob": -2.107773780822754,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 0.48790138959884644
+    },
+    {
+        "Test Id": 387,
+        "Beam Search Decode": "sdotr",
+        "Beam Search Forward Log Prob": -4.554980754852295,
+        "Greedy Search Decode": "sdotr",
+        "Greedy Search Forward Log Prob": -4.554983139038086,
+        "Minimum Risk Decode": "other",
+        "Minimum Risk CTC Loss": 2.5956125259399414
+    },
+    {
+        "Test Id": 388,
+        "Beam Search Decode": "eforerr",
+        "Beam Search Forward Log Prob": -2.8889999389648438,
+        "Greedy Search Decode": "eforerr",
+        "Greedy Search Forward Log Prob": -2.8890037536621094,
+        "Minimum Risk Decode": "before",
+        "Minimum Risk CTC Loss": 0.5438112020492554
+    },
+    {
+        "Test Id": 389,
+        "Beam Search Decode": "njo",
+        "Beam Search Forward Log Prob": -2.311194896697998,
+        "Greedy Search Decode": "njo",
+        "Greedy Search Forward Log Prob": -2.3111941814422607,
+        "Minimum Risk Decode": "enjoy",
+        "Minimum Risk CTC Loss": 0.22656849026679993
+    },
+    {
+        "Test Id": 390,
+        "Beam Search Decode": "hhhu",
+        "Beam Search Forward Log Prob": -8.072937965393066,
+        "Greedy Search Decode": "hhhu",
+        "Greedy Search Forward Log Prob": -8.072937965393066,
+        "Minimum Risk Decode": "shellfish",
+        "Minimum Risk CTC Loss": 1.4074031114578247
+    },
+    {
+        "Test Id": 391,
+        "Beam Search Decode": "ftee",
+        "Beam Search Forward Log Prob": -3.6397738456726074,
+        "Greedy Search Decode": "ftee",
+        "Greedy Search Forward Log Prob": -3.6397757530212402,
+        "Minimum Risk Decode": "after",
+        "Minimum Risk CTC Loss": 0.7849404215812683
+    },
+    {
+        "Test Id": 392,
+        "Beam Search Decode": "rea",
+        "Beam Search Forward Log Prob": -5.156108379364014,
+        "Greedy Search Decode": "rea",
+        "Greedy Search Forward Log Prob": -5.156107425689697,
+        "Minimum Risk Decode": "greasy",
+        "Minimum Risk CTC Loss": 1.354364037513733
+    }
+]

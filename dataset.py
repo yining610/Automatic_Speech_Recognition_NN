@@ -113,7 +113,7 @@ class AsrDataset(Dataset):
         with open(wav_scp, 'r') as f:
             for wavfile in f:
                 wavfile = wavfile.strip()
-                if wavfile == 'jhucsp.trnwav':  # skip header
+                if (wavfile == 'jhucsp.trnwav') or (wavfile == "jhucsp.devwav"):  # skip header
                     continue
                 wav, sr = librosa.load(os.path.join(wav_dir, wavfile), sr=None)
                 feats = librosa.feature.mfcc(y=wav, sr=16e3, n_mfcc=40, hop_length=160, win_length=400).transpose()
