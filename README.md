@@ -79,9 +79,9 @@ optional arguments:
 
 **/snapshots**: Folder to save training snapshots
 
-```discrete.png```: Discrete model last training epoch snapshot
+```discrete.png```: Last training epoch snapshot of Discrete model
 
-```mfcc.png```: MFCC model last training epoch snapshot
+```mfcc.png```: Last training epoch snapshot of MFCC model
 
 # Evaluate the Trained Discrete and MFCC models
 
