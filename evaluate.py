@@ -22,11 +22,10 @@ mfcc_test_set = AsrDataset(scr_file = "./data/clsp.trnscr", feature_type="mfcc",
 # split training set into training and validation set
 train_size = int(0.95 * len(discrete_training_set))
 validation_size = len(discrete_training_set) - train_size
-generator = torch.Generator().manual_seed(42)
 
 # create validation dataset
-discrete_training_set, discrete_validation_set = random_split(discrete_training_set, [train_size, validation_size], generator=generator)
-mfcc_training_set, mfcc_validation_set = random_split(mfcc_training_set, [train_size, validation_size], generator=generator)
+discrete_training_set, discrete_validation_set = random_split(discrete_training_set, [train_size, validation_size], generator=torch.Generator().manual_seed(0))
+mfcc_training_set, mfcc_validation_set = random_split(mfcc_training_set, [train_size, validation_size], generator=torch.Generator().manual_seed(42))
 
 discrete_val_dataloader = DataLoader(discrete_validation_set, batch_size=16, shuffle=False, collate_fn=collate_fn)
 discrete_test_dataloader = DataLoader(discrete_test_set, batch_size=16, shuffle=False, collate_fn=collate_fn)
