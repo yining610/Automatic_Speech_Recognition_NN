@@ -37,7 +37,7 @@
 
 **IE_Project3_Report.pdf**: Project report
 
-**main.py**: Training and evaluating
+**main.py**: Train and evaluate the model
 
 optional arguments:
 ```
