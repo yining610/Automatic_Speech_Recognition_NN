@@ -25,7 +25,7 @@ validation_size = len(discrete_training_set) - train_size
 
 # create validation dataset
 discrete_training_set, discrete_validation_set = random_split(discrete_training_set, [train_size, validation_size], generator=torch.Generator().manual_seed(0))
-mfcc_training_set, mfcc_validation_set = random_split(mfcc_training_set, [train_size, validation_size], generator=torch.Generator().manual_seed(42))
+mfcc_training_set, mfcc_validation_set = random_split(mfcc_training_set, [train_size, validation_size], generator=torch.Generator().manual_seed(0))
 
 discrete_val_dataloader = DataLoader(discrete_validation_set, batch_size=16, shuffle=False, collate_fn=collate_fn)
 discrete_test_dataloader = DataLoader(discrete_test_set, batch_size=16, shuffle=False, collate_fn=collate_fn)
