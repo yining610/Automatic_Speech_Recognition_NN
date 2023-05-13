@@ -1,6 +1,7 @@
 # Automatic_Speech_Recognition_NN
 
 # Directory Structure (Exclude ./data/waveforms)
+```
 ├── IE_Project3_Report.pdf
 ├── README.md
 ├── __pycache__
@@ -36,7 +37,7 @@
 └── snapshots
     ├── discrete.png
     └── mfcc.png
-
+```
 # Files and Folders:
 
 **IE_Project3_Report.pdf**: Project report
