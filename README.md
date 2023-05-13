@@ -85,7 +85,7 @@ optional arguments:
 
 # Evaluate the Trained Discrete and MFCC models
 
-```python evaluate.py``` loads saved model and evaluate accuracy using the same validation datasets used in training.
+```python evaluate.py``` loads two saved models and evaluates accuracy using the same validation datasets used in training.
 
 Output:
 
@@ -121,6 +121,7 @@ Dataset setting:
 3. Testing size: 393
 
 Model Structure:
+
 Embedding -> LSTM -> linear -> LogSoftmax
 
 Hyperparameter Settings: 
@@ -149,6 +150,7 @@ Dataset setting:
 3. Testing size: 393
 
 Model Structure:
+
 LSTM -> linear -> LogSoftmax
 
 Hyperparameter Settings:
