@@ -5,7 +5,7 @@
 **main.py**: Training and evaluating
 
 optional arguments:
-  -h, --help            show this help message and exit
+```
   -v, --verbose         increase output verbosity
   -e EPOCH, --epoch EPOCH
                         number of epochs
@@ -13,15 +13,20 @@ optional arguments:
                         feature type: discrete or mfcc
   -b BATCH_SIZE, --batch_size BATCH_SIZE
                         batch size
+ ```                       
 
-**evaluate.py**: Load the checkpoints and evaluate
+**evaluate.py**: Load the checkpoints and evaluate the models
 
-**checkpoints/**: Folder to store models' checkpoints
-    ```discrete_model.pt```: Model trained by discrete feature
+**/checkpoints**: Folder to store models' checkpoints
 
-    ```mfcc_model.pt```: Model trained by mfcc feature
+```./checkpoints/discrete_model.pt```: Model trained by discrete feature
 
-**figures/**: Folder to store loss and accuracy plot
+```./checkpoints/mfcc_model.pt```: Model trained by mfcc feature
+
+
+**/figures**: Folder to store loss and accuracy plot
+
+```./figures/discrete_accuracy.png```: Training and 
 
     
 
