@@ -42,6 +42,12 @@ optional arguments:
 
 ```./figures/mfcc_loss.png```: Training and validating CTC loss for MFCC model
 
+**/snapshots**: Folder to save training snapshots
+
+```discrete.png```: Discrete model last training epoch snapshot
+
+```mfcc.png```: MFCC model last training epoch snapshot
+
 # Evaluate the Trained Discrete and MFCC models
 
 ```python evaluate.py``` loads saved model and evaluate accuracy using the same validation datasets used in training.
@@ -72,7 +78,7 @@ Train the model: ```python main.py -v -b 16 -f discrete -e 50```
 Outputs:  ```./figuress/discrete_accuracy.png ./figures/discrete_loss.png ./figures/discrete_mrd_accuracy.png```, ```discrete_test_result.json```, ```./checkpoints/discrete_model.pt```
 
 Snapshot:
-
+![Last Epoch](/snapshots/discrete.png)
 
 Dataset setting:
 1. Training size: 758
