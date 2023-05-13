@@ -415,7 +415,7 @@ def main():
         json.dump(data, f, indent=4)
 
     # Save the model 
-    torch.save(model.state_dict(), f"./checkpoints/{args.feature_type}_model.pt")
+    # torch.save(model.state_dict(), f"./checkpoints/{args.feature_type}_model.pt")
 
 
 if __name__ == "__main__":

@@ -48,10 +48,31 @@ optional arguments:
 
 Output:
 
+```
+Evaluating on Validation Set Using Minimum CTC Loss Decoder For Discrete Model
+Validation Greedy Search Decoded Words: ['iny', 'ttm', 'bouh', 'oway', 'every', 'soes', 'st', 'nny']
+Validationo Beam Search Decoded Words: ['iny', 'ttm', 'bouh', 'oway', 'every', 'soes', 'st', 'nny']
+Validation CTC Decoded Words: ['many', 'often', 'about', 'away', 'every', 'sometimes', 'system', 'many']
+original words: ['many', 'often', 'about', 'away', 'every', 'sometimes', 'extra', 'money']
+Validation Accuracy: 0.775
+
+Evaluating on Validation Set Using Minimum CTC Loss Decoder For MFCC Model
+Validation Greedy Search Decoded Words: ['', '', '', '', '', '', 't', '']
+Validationo Beam Search Decoded Words: ['', '', '', '', '', '', 't', '']
+Validation CTC Decoded Words: ['even', 'often', 'about', 'eating', 'every', 'enough', 'after', 'over']
+original words: ['many', 'often', 'about', 'away', 'every', 'sometimes', 'extra', 'money']
+Validation Accuracy: 0.525
+```
+
 
 # Primary System
 
 Train the model: ```python main.py -v -b 16 -f discrete -e 50```
+
+Outputs:  ```./figuress/discrete_accuracy.png ./figures/discrete_loss.png ./figures/discrete_mrd_accuracy.png```, ```discrete_test_result.json```, ```./checkpoints/discrete_model.pt```
+
+Snapshot:
+
 
 Dataset setting:
 1. Training size: 758
